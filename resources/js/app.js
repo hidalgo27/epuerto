@@ -1,4 +1,6 @@
 require('./bootstrap');
+const feather = require('feather-icons')
+feather.replace();
 import { createApp } from 'vue'
 // import { ElButton, ElSelect, ElSwitch } from 'element-plus';
 import ElementPlus from 'element-plus';
