@@ -49,9 +49,16 @@
                </div>
                <div class="flex items-center gap-5">
                   <i data-feather="activity" class=" text-primary"></i>
-                  <div class="grid grid-rows-2">
+                  <div class="flex flex-col">
                      <span class="text-primary font-bold">Categorìa</span>
-                     <span class="text-gray-400">Familiar</span>
+                     <div class="flex flex-col">
+                        @if($paquete->paquetes_categoria->count()==0)
+                        <span class="text-gray-400">General</span>
+                        @endif
+                        @foreach($paquete->paquetes_categoria as $categoria)
+                        <span class="text-gray-400">{{$categoria->categoria->nombre}}</span>
+                        @endforeach
+                     </div>
                   </div>
                </div>
                <div class="flex items-center gap-5">
@@ -63,6 +70,7 @@
                   </div>
             </div>
             <hr>
+            @if ($paquete->descripcion !=null)
             <div class="my-12 mt-16">
                <div class="flex gap-5">
                   <i data-feather="file-text" class=" text-amber-300"></i>
@@ -70,6 +78,7 @@
                </div>
                <div class="text-justify text-gray-500">{!!$paquete->descripcion!!}</div>
             </div>
+            @endif
             <div class="my-12">
                <div class="flex gap-5">
                   <i data-feather="send" class=" text-amber-300"></i>
@@ -81,7 +90,24 @@
                         <input class="absolute opacity-0 " id="tab-multi-{{$loop->index}}" type="checkbox" name="tabs">
                         <label class="block p-5 cursor-pointer" for="tab-multi-{{$loop->index}}">Día {{$loop->index+1}}: {{$item->itinerarios->titulo}}</label>
                         <div class="tab-content overflow-hidden border-l-2 bg-gray-100 ">
-                           <div class="text-gray-500 p-5">{!!$item->itinerarios->descripcion!!}</div>
+                           <div class="text-gray-500 px-5 pt-5">{!!$item->itinerarios->descripcion!!}</div>
+                           <div class="carousel relative shadow rounded p-5">
+                              <div class="carousel-inner relative overflow-hidden w-full">
+                              @foreach($item->itinerarios->itinerario_imagen as $imagen)
+                              <input class="carousel-open" type="radio" id="carousel-{{$imagen->nombre}}" name="carousel{{$item->itinerarios->titulo}}" aria-hidden="true" hidden="" checked="checked">
+                                 <div class="carousel-item absolute opacity-0">
+                                    <img src="{{asset($imagen->nombre)}}" class="object-cover">
+                                 </div>
+                              @endforeach
+                              <ol class="carousel-indicators">
+                                 @foreach($item->itinerarios->itinerario_imagen as $imagen)
+                                 <li class="inline-block mr-3">
+                                    <label for="carousel-{{$imagen->nombre}}" class="carousel-bullet cursor-pointer block text-secondary text-7xl hover:text-primary">•</label>
+                                 </li>
+                                 @endforeach
+                              </ol> 
+                              </div>
+                           </div>
                         </div>
                      </div>
                   @endforeach
@@ -116,7 +142,7 @@
                <div>
                   <div class="flex gap-5 my-6">
                      <i data-feather="user" class=" text-amber-300"></i>
-                     <h3 class="pb-7 text-lg text-primary font-semibold">Que llevar</h3>                                         
+                     <h3 class="text-lg text-primary font-semibold">Que llevar</h3>                                         
                   </div>
                   <ul class="list-inside list-disc ml-5 text-gray-500">
                      {!!$paquete->opcional!!}
@@ -140,76 +166,70 @@
                </div>
                <div class="carousel relative shadow rounded">
                   <div class="carousel-inner relative overflow-hidden w-full">
-                  <!--Slide 1-->
-                     <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
+                     @foreach($paquete->imagen_paquetes as $imagen)
+                     <input class="carousel-open" type="radio" id="carousel-{{$loop->index}}" name="carousel" aria-hidden="true" hidden="" checked="checked">
                      <div class="carousel-item absolute opacity-0">
-                        <img src="{{asset('images/tour/camino-inca-1.jpg')}}" class=" object-cover w-full">
+                        <img src="{{asset($imagen->nombre)}}" class=" object-cover w-full">
                      </div>
-                     <!--Slide 2-->
-                     <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
-                     <div class="carousel-item absolute opacity-0">
-                           <img src="{{asset('images/tour/camino-inca-2.jpg')}}" class=" object-cover w-full">
-                     </div>
-                     <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
-                     <div class="carousel-item absolute opacity-0">
-                           <img src="{{asset('images/tour/camino-inca-3.jpg')}}" class=" object-cover w-full">
-                     </div>
-                     
-                     <input class="carousel-open" type="radio" id="carousel-4" name="carousel" aria-hidden="true" hidden="">
-                     <div class="carousel-item absolute opacity-0">
-                           <img src="{{asset('images/tour/camino-inca-2.jpg')}}" class=" object-cover w-full">
-                     </div>
+                     @endforeach
                      <ol class="carousel-indicators">
+                     @foreach($paquete->imagen_paquetes as $imagen)                     
                         <li class="inline-block mr-3">
-                           <label for="carousel-1" class="carousel-bullet cursor-pointer block text-secondary text-7xl hover:text-primary">•</label>
+                           <label for="carousel-{{$loop->index}}" class="carousel-bullet cursor-pointer block text-secondary text-7xl hover:text-primary">•</label>
                         </li>
-                        <li class="inline-block mr-3">
-                           <label for="carousel-2" class="carousel-bullet cursor-pointer block text-secondary text-7xl hover:text-primary">•</label>
-                        </li>
-                        <li class="inline-block mr-3">
-                           <label for="carousel-3" class="carousel-bullet cursor-pointer block text-secondary text-7xl hover:text-primary">•</label>
-                        </li>
-                        <li class="inline-block mr-3">
-                           <label for="carousel-4" class="carousel-bullet cursor-pointer block text-secondary text-7xl hover:text-primary">•</label>
-                        </li>
-                     </ol>              
+                     @endforeach
+                     </ol>         
                   </div>
                </div>
             </div>
          </div>
-         <div class="md:col-span-2 lg:mr-8 mt-10">
+         <div id="contacto_tour" class="md:col-span-2 lg:mr-8 mt-10">
+            @if (session('status2'))
+               <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4" role="alert">
+                  <strong class="font-bold">Gracias por contactar con nosotros</strong><br>
+                  <span class="block sm:inline">Su mensaje fue enviado satisfactoriamente.</span>
+               </div>
+            @endif
             <div class="shadow-lg mt-10 lg:mt-0">
                <div class="bg-secondary text-center rounded-t">
                   <div class="p-5"><span class=" text-2xl font-bold text-white">Contactar</span></div>
                </div>
                <div class="text-sm px-5 py-5 rounded-b">
+               <form method="POST" action="{{route('contact_form_tour')}}">
+                     @csrf
                   <div class="p-2">
-                     <input type="text" name="name" placeholder="Nombre" required class="w-full p-2 focus:outline-none border border-gray-400 rounded hover:shadow">
+                     <input type="text" name="tNombre" placeholder="Nombre" required class="w-full p-2 focus:outline-none border border-gray-400 rounded hover:shadow">
                   </div>
                   <div class="p-2">
-                     <input type="email" name="email" placeholder="Correo electrónico" required class="w-full p-2 focus:outline-none border border-gray-400 rounded hover:shadow">
+                     <input type="email"name="tEmail" placeholder="Correo electrónico" required class="w-full p-2 focus:outline-none border border-gray-400 rounded hover:shadow">
                   </div>
                   <div class="p-2">
-                     <input type="text" name="telefono" placeholder="Número de celular" required class="w-full p-2 focus:outline-none border border-gray-400 rounded hover:shadow">
+                     <input type="text" name="tCelular" placeholder="Número de celular" required class="w-full p-2 focus:outline-none border border-gray-400 rounded hover:shadow">
                   </div>
                   <div class="p-2">
-                     <textarea type="text" name="mensaje" placeholder="Mensaje" required class="w-full p-2 focus:outline-none border border-gray-400 rounded hover:shadow"></textarea>
+                     <textarea type="text" name="tMensaje" placeholder="Mensaje" required class="w-full p-2 focus:outline-none border border-gray-400 rounded hover:shadow"></textarea>
                   </div>
                   <div class="p-2">
-                     <button id="button" type="submit" class="w-full py-2 text-lg text-white transition-all duration-150 ease-linear bg-secondary tracking-wider hover:bg-secondary hover:bg-opacity-80 transition duration-500 rounded-full">
+                     <button id="button" type="submit" class="focus:outline-none focus:shadow-outline w-full py-2 text-lg text-white transition-all duration-150 ease-linear bg-secondary tracking-wider hover:bg-secondary hover:bg-opacity-80 transition duration-500 rounded-full">
                         Enviar
                      </button>
                   </div>
                </div>
+            </form>
             </div>
             <div class="my-12">
                <span class="text-primary font-semibold">Tours recomendados</span>
-               @foreach ($paquetes as $paquete)
-                <a href="/en-tours/{{$paquete->url}}">
-                    <div class="flex flex-cols-2 px-2 py-5 lg:gap-5 gap-2 items-center">
-                        <img src="{{asset('images/tour/camino-inca-1.jpg')}}" class="object-cover h-10 w-10 rounded-full transform hover:scale-150 transition duration-500">
-                        <span class="lg:text-sm text-xs text-gray-500 hover:text-secondary">{{$paquete->titulo}}</span>
-                    </div>
+               @foreach ($paquetes as $paque)
+                <a href="/en-tours/{{$paque->url}}">
+                    <div class="flex flex-cols-2 lg:px-5 px-2 py-5 lg:gap-5 gap-2 items-center">
+                        <img src="{{asset($paque->imagen)}}" class="object-cover h-16 w-16 rounded-full transform hover:scale-150 transition duration-500">
+                        @if($paquete->titulo!=$paque->titulo)
+                           <div class="lg:text-sm text-xs text-gray-500 hover:text-secondary transform hover:-translate-x-2 transition duration-500 ease-in-out">{{$paque->titulo}}</div>
+                        @endif
+                        @if($paquete->titulo==$paque->titulo)
+                           <div class="lg:text-sm text-xs text-secondary font-semibold hover:text-secondary">{{$paque->titulo}}</div>
+                        @endif
+                     </div>
                 </a>
                 <hr class="mx-2">
             @endforeach

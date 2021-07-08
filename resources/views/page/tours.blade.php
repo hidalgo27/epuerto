@@ -48,7 +48,7 @@
             <a href="/en-tours/{{$paquete->url}}" class="lg:hidden"><h3 class="text-2xl font-semibold text-primary pb-3 hover:text-secondary hover:font-light">Cusco Magico 4 Días 3 Noches</h3></a>
             <div class="grid lg:grid-cols-2 grid-cols-1 gap-8 items-center">
                <div class="relative">
-                  <a href="/en-tours/{{$paquete->url}}"><img src="{{asset('images/tour/camino-inca-1.jpg')}}" class="h-full object-cover shadow-lg rounded transform hover:scale-105 transition duration-500"></a>
+                  <a href="/en-tours/{{$paquete->url}}"><img src="{{asset($paquete->imagen)}}" class="object-cover shadow-lg rounded transform hover:scale-105 transition duration-500"></a>
                   <div class=" absolute p-2 bottom-0 left-0 bg-gray-800 bg-opacity-60 text-secondary border-t border-r border-amber-300">
                      <div class="cursor-pointer transform hover:scale-125 transition duration-500 font-black">{{$paquete->duracion}} días</div>
                   </div>
