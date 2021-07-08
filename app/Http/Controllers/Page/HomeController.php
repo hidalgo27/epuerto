@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Page;
 use App\Http\Controllers\Controller;
 use App\Models\TPaquete;
 use Illuminate\Http\Request;
-use App\Models\TPaquete;
 use App\Models\THotel;
 use App\Models\TpaqueteItinerario;
 use App\Models\TItinerario;
