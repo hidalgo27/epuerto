@@ -68,7 +68,10 @@
                      <i data-feather="dollar-sign" class=" text-primary"></i>
                      <div class="grid grid-rows-2">
                         <span class="text-primary font-bold">Precio</span>
-                        <span class="text-gray-400">from {{$paquete->precio_paquetes->where('estrellas', 2)->first()->precio_s}} usd</span>
+                        <span class="text-gray-400">
+{{--                            from {{$paquete->precio_paquetes->where('estrellas', 2)->first()->precio_s}} usd--}}
+                            Cotizar
+                        </span>
                      </div>
                   </div>
             </div>
@@ -108,7 +111,7 @@
                                     <label for="carousel-{{$imagen->nombre}}" class="carousel-bullet cursor-pointer block text-secondary text-7xl hover:text-primary">•</label>
                                  </li>
                                  @endforeach
-                              </ol> 
+                              </ol>
                               </div>
                            </div>
                         </div>
@@ -122,7 +125,7 @@
                   <div>
                      <div class="flex gap-5">
                         <i data-feather="user-check" class=" text-amber-300"></i>
-                        <h3 class="pb-7 text-lg text-primary font-semibold">Incluye</h3>                                         
+                        <h3 class="pb-7 text-lg text-primary font-semibold">Incluye</h3>
                      </div>
                      <ul class="list-inside list-disc ml-5 text-gray-500">
                         {!!$paquete->incluye!!}
@@ -145,7 +148,7 @@
                <div>
                   <div class="flex gap-5 my-6">
                      <i data-feather="user" class=" text-amber-300"></i>
-                     <h3 class="text-lg text-primary font-semibold">Que llevar</h3>                                         
+                     <h3 class="text-lg text-primary font-semibold">Que llevar</h3>
                   </div>
                   <ul class="list-inside list-disc ml-5 text-gray-500">
                      {!!$paquete->opcional!!}
@@ -156,7 +159,7 @@
             <div class="my-12">
                <div class="flex gap-5">
                   <i data-feather="map-pin" class=" text-amber-300"></i>
-                  <h3 class="pb-7 text-lg text-primary font-semibold">Ubicación geográfica</h3>                                         
+                  <h3 class="pb-7 text-lg text-primary font-semibold">Ubicación geográfica</h3>
                </div>
                <div class="flex justify-center">
                   <iframe class="shadow rounded w-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7766.948289097877!2d-72.26987952796162!3d-13.258283769771339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x916dea6dde30c85f%3A0x6b45959fbd0c6f6a!2sOllantaytambo!5e0!3m2!1ses-419!2spe!4v1624983835113!5m2!1ses-419!2spe" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
@@ -165,7 +168,7 @@
             <div class="mt-12">
                <div class="flex gap-5">
                   <i data-feather="image" class=" text-amber-300"></i>
-                  <h3 class="pb-7 text-lg text-primary font-semibold">Galería</h3>                                         
+                  <h3 class="pb-7 text-lg text-primary font-semibold">Galería</h3>
                </div>
                <div class="carousel relative shadow rounded">
                   <div class="carousel-inner relative overflow-hidden w-full">
@@ -176,12 +179,12 @@
                      </div>
                      @endforeach
                      <ol class="carousel-indicators">
-                     @foreach($paquete->imagen_paquetes as $imagen)                     
+                     @foreach($paquete->imagen_paquetes as $imagen)
                         <li class="inline-block mr-3">
                            <label for="carousel-{{$loop->index}}" class="carousel-bullet cursor-pointer block text-secondary text-7xl hover:text-primary">•</label>
                         </li>
                      @endforeach
-                     </ol>         
+                     </ol>
                   </div>
                </div>
             </div>
