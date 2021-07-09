@@ -56,7 +56,7 @@ class HomeController extends Controller
         return view('page.nosotros',compact('paquetes'));
     }
     public function contact_form(Request $request){
-        $from = 'tania.vanessa609@gmail.com';
+        $from = 'percy@epuerto.com';
         $nombre = $request->tNombre;
         $email = $request->tEmail;
         $celular = $request->tCelular;
@@ -66,7 +66,7 @@ class HomeController extends Controller
             Mail::send(['html' => 'email.emailClient'], ['nombre' => $nombre],
                 function ($messaje) use ($email, $nombre) { $messaje->to($email, $nombre)
                     ->subject('EPUERTO')
-                    ->from('tania.vanessa609@gmail.com', 'EPUERTO');
+                    ->from('percy@epuerto.com', 'EPUERTO');
             });
             Mail::send(['html' => 'email.emailContacto'], [
                 'nombre' => $nombre,
@@ -76,7 +76,7 @@ class HomeController extends Controller
                 'mensaje' => $mensaje,],
                 function ($messaje) use ($from) { $messaje->to($from, 'EPUERTO')
                     ->subject('EPUERTO - Formulario de Contacto')
-                    ->from('tania.vanessa609@gmail.com', 'EPUERTO');
+                    ->from('percy@epuerto.com', 'EPUERTO');
             });
             return Redirect::to(URL::previous() . "#contacto")->with('status', 'Registro satisfactorio.');
         }
