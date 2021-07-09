@@ -80,7 +80,7 @@
 
     <section class="md:px-24 px-10 my-24 lg:justify-between lg:flex">
         <div class="relative">
-            <h2 class="md:text-5xl text-3xl font-semibold z-30 text-primary relative">Travel Packages</h2>
+            <h2 class="md:text-5xl text-3xl font-semibold z-30 text-primary relative">Paquetes de Viaje</h2>
             <h4 class="md:text-8xl text-5xl font-bold inset-0 text-gray-100 text-opacity-90 absolute z-10 -top-10">TOURS</h4>
         </div>
         <div class="block pt-6 text-right">
@@ -97,7 +97,13 @@
                     <img src="{{asset($paquete->imagen)}}"  class="rounded-t-xl object-cover transition duration-500 ease-in-out transform group-hover:-translate-x-0 group-hover:scale-105"/>
                 </div>
                 <div class="p-9 block">
-                    <h2 class="text-xl font-bold">{{$paquete->titulo}} <span class="text-secondary"><span class="text-xs align-top">Desde</span>{{$paquete->precio_paquetes->where('estrellas', 2)->first()->precio_s}}<span class="text-xs">usd</span></span></h2>
+                    <h2 class="text-xl font-bold">{{$paquete->titulo}}
+{{--                        <span class="text-secondary">--}}
+{{--                            <span class="text-xs align-top">Desde</span>--}}
+{{--                            {{$paquete->precio_paquetes->where('estrellas', 2)->first()->precio_s}}--}}
+{{--                            <span class="text-xs">usd</span>--}}
+{{--                        </span>--}}
+                    </h2>
                     <div class="text-sm mb-7 text-gray-500 mt-3">{!!Str::limit($paquete->descripcion, 100,$end='...')!!}</div>
 
                     <div class="transform hover:-translate-y-3 transition duration-500 ease-in-out">
