@@ -1,4 +1,7 @@
 @extends('default.page.app')
+@section('title')
+    <title>Nosotros best cusco day trips</title>
+@endsection
 @section('content')
     <div class="relative -mt-32 flex flex-col justify-between h-screen  overflow-hidden">
         <div class="relative items-start grid grid-cols-3 justify-between ">

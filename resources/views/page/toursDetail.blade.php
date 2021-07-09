@@ -1,4 +1,7 @@
 @extends('default.page.app')
+@section('title')
+    <title>{{$paquete->titulo}} best cusco day trips</title>
+@endsection
 @section('content')
    <div class="relative -mt-32 flex flex-col justify-between h-screen  overflow-hidden">
       <div class="relative items-start grid grid-cols-3 justify-between ">
@@ -222,7 +225,7 @@
                @foreach ($paquetes as $paque)
                 <a href="/en-tours/{{$paque->url}}">
                     <div class="flex flex-cols-2 lg:px-5 px-2 py-5 lg:gap-5 gap-2 items-center">
-                        <img src="{{asset($paque->imagen)}}" class="object-cover h-16 w-16 rounded-full transform hover:scale-150 transition duration-500">
+                        <img src="{{asset($paque->imagen)}}" class="object-cover h-16 w-16 rounded-full transform hover:scale-125 transition duration-500">
                         @if($paquete->titulo!=$paque->titulo)
                            <div class="lg:text-sm text-xs text-gray-500 hover:text-secondary transform hover:-translate-x-2 transition duration-500 ease-in-out">{{$paque->titulo}}</div>
                         @endif
