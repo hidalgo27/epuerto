@@ -2,7 +2,7 @@
         <table align="center" border="0" cellpadding="0" cellspacing="0" width="600" style="border-collapse: collapse;">
           <tr>
             <td bgcolor="#ffc181" align="center" style="padding: 40px 0 30px 0;">
-              <img src="{{asset('images/epuerto.png')}}" alt="Epuerto" width="250px"/>
+              <img src="{{asset('images/logo-epuerto.png')}}" alt="Epuerto" width="250px"/>
             </td>
           </tr>
           <tr>
@@ -20,7 +20,7 @@
               <table border="0" cellpadding="0" cellspacing="0" width="100%">
                 <tr>
                   <td style="color:#fff; font-family: 'Segoe UI';">
-                    Visita nuestra página web <a href="https://epuertotravelperu.com/" target="_blank" style="color:#FF9C34;">EPUERTO</a> y síguenos en nuestras redes sociales
+                    Visita nuestra página web <a href="http://epuertotravelperu.com/" target="_blank" style="color:#FF9C34;">EPUERTO</a> y síguenos en nuestras redes sociales
                   </td>
                   <td align="right">
                     <table border="0" cellpadding="0" cellspacing="0" style="padding:0px 10px;">
