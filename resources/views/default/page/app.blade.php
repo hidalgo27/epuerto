@@ -55,22 +55,22 @@
         </div>
     </header>
 
-    <nav class="banner-wrapper sticky -mt-10 px-24 top-0 z-50">
+    <nav class="banner-wrapper sticky -mt-10 lg:px-24 px-4 top-0 z-50">
         <div class="banner">
             <!-- This example requires Tailwind CSS v2.0+ -->
             <div class="bg-white dark:bg-gray-800 rounded-xl shadow dark:bg-gray-800">
                 <nav class="dark:bg-gray-800">
-                    <div class="container px-6 py-6 mx-auto md:flex md:justify-between md:items-center">
+                    <div class="container lg:px-6 px-3 py-6 mx-auto md:flex md:justify-between md:items-center">
                         <div class="flex items-center justify-between">
                             <div>
                                 <a class="text-2xl font-bold text-gray-800 dark:text-white lg:text-3xl hover:text-gray-700 dark:hover:text-gray-300" href="/">
-                                    <img src="{{asset('images/epuerto.png')}}" alt="" class="w-40">
+                                    <img src="{{asset('images/logo-epuerto.png')}}" alt="" class="w-40">
                                 </a>
                             </div>
 
                             <!-- Mobile menu button -->
                             <div class="flex md:hidden">
-                                <button type="button" class="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400" aria-label="toggle menu">
+                                <button id="clos"type="button" class="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400" aria-label="toggle menu">
                                     <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
                                         <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
                                     </svg>
@@ -79,14 +79,14 @@
                         </div>
 
                         <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
-                        <div class="items-center md:flex">
-                            <div class="flex flex-col md:flex-row md:mx-6">
-                                <a class="my-1 text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-indigo-500 dark:hover:text-indigo-400 md:mx-4 md:my-0" href="/nosotros">Nosotros</a>
-                                <a class="my-1 text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-indigo-500 dark:hover:text-indigo-400 md:mx-4 md:my-0" href="/en-tours">Best Cusco Tours</a>
-                                <a class="my-1 text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-indigo-500 dark:hover:text-indigo-400 md:mx-4 md:my-0" href="/informacion-de-viaje">Información</a>
-                                <a class="my-1 text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-indigo-500 dark:hover:text-indigo-400 md:mx-4 md:my-0" href="/hoteles">Hoteles</a>
-                                <a class="my-1 text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-indigo-500 dark:hover:text-indigo-400 md:mx-4 md:my-0" href="/f-a-q">FAQs</a>
-                                <a class="my-1 text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-indigo-500 dark:hover:text-indigo-400 md:mx-4 md:my-0" href="/contacto">Contacto</a>
+                        <div class="items-center md:flex toggle hidden">
+                            <div class="flex flex-col md:flex-row lg:mx-6 md::gap-0 gap-2">
+                                <a class="my-1 text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-secondary dark:hover:text-indigo-400 md:mx-4 md:my-0 transform hover:-translate-x-2 transition duration-500 ease-in-out"  href="/nosotros">Nosotros</a>
+                                <a class="my-1 text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-secondary dark:hover:text-indigo-400 md:mx-4 md:my-0 transform hover:-translate-x-2 transition duration-500 ease-in-out" href="/en-tours">Best Cusco Tours</a>
+                                <a class="my-1 text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-secondary dark:hover:text-indigo-400 md:mx-4 md:my-0 transform hover:-translate-x-2 transition duration-500 ease-in-out" href="/informacion-de-viaje">Información</a>
+                                <a class="my-1 text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-secondary dark:hover:text-indigo-400 md:mx-4 md:my-0 transform hover:-translate-x-2 transition duration-500 ease-in-out" href="/hoteles">Hoteles</a>
+                                <a class="my-1 text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-secondary dark:hover:text-indigo-400 md:mx-4 md:my-0 transform hover:-translate-x-2 transition duration-500 ease-in-out" href="/f-a-q">FAQs</a>
+                                <a class="my-1 text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-secondary dark:hover:text-indigo-400 md:mx-4 md:my-0 transform hover:-translate-x-2 transition duration-500 ease-in-out" href="/contacto">Contacto</a>
                             </div>
 
                         </div>
@@ -100,24 +100,31 @@
     @yield('content')
 
     <section id="contacto">
-        <div style="background-image: url('{{asset('images/machu-picchu.jpg')}}');" class="bg-fixed bg-center lg:bg-left bg-right md:pl-20 px-2 py-10">
-            <div class="lg:w-2/5 md:w-3/5 md:p-10 p-5 bg-gray-50 rounded">
+        <div style="background-image: url('{{asset('images/machu-picchu.jpg')}}');" class="bg-fixed bg-center lg:bg-left bg-right px-2 py-10">
+            @if (session('status'))
+            <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
+                <strong class="font-bold">Gracias por contactar con nosotros</strong><br>
+                <span class="block sm:inline">Su mensaje fue enviado satisfactoriamente.</span>
+            </div>
+            @endif
+            <div class="lg:w-2/5 md:w-3/5 md:p-10 p-5 bg-gray-50 rounded md:ml-20 mt-4">
                 <h2 class="text-3xl mb-6 font-black text-primary">Formulario de Contacto</h2>
-                <form>
+                <form method="POST" action="{{route('contact_form')}}">
+                @csrf
                 <div class="mb-4">
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 placeholder-primary placeholder-opacity-70 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Nombre">
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 placeholder-primary placeholder-opacity-70 leading-tight focus:outline-none focus:shadow-outline" name="tNombre" type="text" placeholder="Nombre" required>
                 </div>
                 <div class="mb-4">
-                        <input class="shadow appearance-none border rounded w-full py-2 px-3 placeholder-primary placeholder-opacity-70 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Correo electrónico">
+                        <input class="shadow appearance-none border rounded w-full py-2 px-3 placeholder-primary placeholder-opacity-70 leading-tight focus:outline-none focus:shadow-outline" name="tEmail" type="text" placeholder="Correo electrónico" required>
                 </div>
                 <div class="mb-4">
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 placeholder-primary placeholder-opacity-70 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Número de celular">
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 placeholder-primary placeholder-opacity-70 leading-tight focus:outline-none focus:shadow-outline" name="tCelular" type="text" placeholder="Número de celular">
                 </div>
                 <div class="mb-4">
-                        <textarea class="shadow form-textarea mt-1 block w-full border rounded w-full py-2 px-3 placeholder-primary placeholder-opacity-70 leading-tight focus:outline-none focus:shadow-outline" rows="5" placeholder="Mensaje"></textarea>
+                    <textarea class="shadow form-textarea mt-1 block w-full border rounded w-full py-2 px-3 placeholder-primary placeholder-opacity-70 leading-tight focus:outline-none focus:shadow-outline" name="tMensaje" placeholder="Mensaje" required></textarea>
                 </div>
                 <div class="flex items-center justify-center">
-                    <button class="bg-secondary hover:bg-opacity-70 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                    <button class="bg-secondary hover:bg-opacity-70 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
                         Enviar
                     </button>
                 </div>
@@ -139,7 +146,7 @@
                         <a href="https://www.youtube.com/user/EpuertoPeruTravelPer" target="_blank"><img src="{{asset('images/iconos/youtube.png')}}" class="h-10 w-10 transform hover:scale-125 transition duration-500"></a>
                         <div class=" bg-green-500 rounded-full h-10 w-10 flex items-center justify-center transform hover:scale-125 transition duration-500">
                             <a href="https://www.tripadvisor.com.pe/Attraction_Review-g294314-d3836582-Reviews-Epuerto_Peru_Travel_Tours-Cusco_Cusco_Region.html" target="_blank"><img src="{{asset('images/iconos/tripadvisor.png')}}" class="h-8 w-8 "></a>
-                        </div>  
+                        </div>
                     </div>
                 </div>
                 <div class="text-white">
@@ -147,21 +154,21 @@
                     <div class="flex items-center my-3 gap-x-3 text-sm">
                         <i data-feather="phone" class="ml-6 text-secondary"></i>
                         <div class="grid grid-rows-2">
-                            <span>+51 84 228824</span> 
+                            <span>+51 84 228824</span>
                             <span>+51 984 645720</span>
                         </div>
                     </div>
                     <div class="flex items-center gap-x-3 text-sm">
                         <i data-feather="mail" class="ml-6 my-auto text-secondary"></i>
                         <div class="grid grid-rows-2">
-                            <span>percy@epuerto.com</span> 
+                            <span>percy@epuerto.com</span>
                             <span>sales2@epuerto.com</span>
                         </div>
                     </div>
                     <div class="flex items-center my-3 gap-x-3 text-sm">
                         <i data-feather="map-pin" class="ml-6 text-secondary"></i>
                         <span>Jr. Cusco L-10 Dpto. 602 Wanchaq – Cusco – Peru</span>
-                    </div>   
+                    </div>
                 </div>
                 <div class="flex flex-col gap-2">
                     <a href="https://www.iglta.org/" target="_blank"><img src="{{asset('images/iglta.jpg')}}" class="w-48"></a>
@@ -218,6 +225,12 @@
             }
             };
         }
+        document.getElementById("clos").onclick = function toggleMenu() {
+  const navToggle = document.getElementsByClassName("toggle");
+  for (let i = 0; i < navToggle.length; i++) {
+    navToggle.item(i).classList.toggle("hidden");
+  }
+};
 </script>
 </body>
 </html>

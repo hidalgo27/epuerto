@@ -90,7 +90,7 @@
         @foreach ($paquetes as $paquete)
             <div class="group shadow-lg rounded-xl overflow-hidden">
                 <div class="overflow-hidden relative">
-                    <img src="https://templatekit.jegtheme.com/travenu/wp-content/uploads/sites/22/2020/12/imagee-NUEL43L.jpg" alt="sds" class="rounded-t-xl object-cover transition duration-500 ease-in-out transform group-hover:-translate-x-0 group-hover:scale-105"/>
+                    <img src="{{asset($paquete->imagen)}}"  class="rounded-t-xl object-cover transition duration-500 ease-in-out transform group-hover:-translate-x-0 group-hover:scale-105"/>
                 </div>
                 <div class="p-9 block">
                     <h2 class="text-xl font-bold">{{$paquete->titulo}} <span class="text-secondary"><span class="text-xs align-top">Desde</span>{{$paquete->precio_paquetes->where('estrellas', 2)->first()->precio_s}}<span class="text-xs">usd</span></span></h2>
@@ -114,7 +114,7 @@
             <div class="transform hover:-translate-y-3 transition duration-500 ease-in-out mt-5">
                 <a href="/noticias" class="transform hover:-translate-y-3 transition duration-500 ease-in-out rounded-full py-4 px-9 bg-secondary text-xs text-white font-semibold">VER NOTICIAS</a>
             </div>
-            <div class="grid grid-cols-3 gap-5 mt-10 mr-12 text-center cursor-pointer">
+            <div class="grid lg:grid-cols-3 grid-cols-1 gap-5 mt-10 mr-12 text-center cursor-pointer">
                 <div class="bg-white rounded-lg shadow transform hover:scale-105 transition duration-500">
                     <a href="/hoteles#hotel" class="flex flex-col justify-center items-center gap-4  p-5">
                         <img src="{{asset('/images/iconos/hotel.png')}}" class="h-16 w-16 hover:opacity-60">
@@ -156,14 +156,14 @@
         @foreach ($destinos as $destino)
             <div class="group shadow-lg rounded-xl overflow-hidden">
                 <div class="overflow-hidden relative">
-                    <img src="{{asset($destino->imagen)}}" class="h-64 rounded-t-xl object-cover transition duration-500 ease-in-out transform group-hover:-translate-x-0 group-hover:scale-105"/>
+                    <img src="{{asset($destino->imagen)}}" class="rounded-t-xl object-cover transition duration-500 ease-in-out transform group-hover:-translate-x-0 group-hover:scale-105"/>
                 </div>
                 <div class="md:p-9 p-5 block">
-                    <h2 class="text-xl font-bold text-pri">{{$destino->nombre}}</h2>
+                    <h2 class="text-xl font-bold text-primary">{{$destino->nombre}}</h2>
                     <div class="text-sm mb-7 text-gray-500 mt-3">{!!Str::limit($destino->resumen, 100,$end='...')!!}</div>
     
                     <div class="transform hover:-translate-y-3 transition duration-500 ease-in-out">
-                        <a href="" class="transform hover:-translate-y-3 transition duration-500 ease-in-out rounded-full py-4 px-9 bg-secondary text-xs text-white font-semibold">VER DETALLES</a>
+                        <a href="/informacion-de-viaje#{{$destino->nombre}}" class="transform hover:-translate-y-3 transition duration-500 ease-in-out rounded-full py-4 px-9 bg-secondary text-xs text-white font-semibold">VER DETALLES</a>
                     </div>
                 </div>
             </div>

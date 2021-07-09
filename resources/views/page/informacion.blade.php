@@ -51,11 +51,11 @@
                 </div>
                 <hr class="my-10">
                 @foreach ($destinos as $destino)
-                    <div class="mb-10">
-                        <h3 class="text-primary text-2xl font-semibold hover:text-secondary hover:font-light">{{$destino->nombre}}</h3>
+                    <div id="{{$destino->nombre}}" class="mb-10">
+                        <h3 class="text-primary text-2xl font-semibold hover:text-secondary hover:font-light mb-2">{{$destino->nombre}}</h3>
                         <div class="grid lg:grid-cols-2 grid-cols-1 gap-5 items-center">
                             <div>
-                                <img src="{{asset($destino->imagen)}}" class="rounded-lg hover:shadow-xl transform hover:scale-105 transition duration-500">
+                                <img src="{{asset($destino->imagen)}}" class="object-cover rounded-lg hover:shadow-xl transform hover:scale-105 transition duration-500">
                             </div>
                             <div class="flex flex-col text-gray-700 p-5 border-r border-b border-secondary border-opacity-30">
                                 <div class="mt-3 text-gray-500">
@@ -76,8 +76,8 @@
                 @foreach ($paquetes as $paquete)
                     <a href="/en-tours/{{$paquete->url}}">
                         <div class="flex flex-cols-2 px-2 py-5 lg:gap-5 gap-2 items-center">
-                            <img src="{{asset('images/tour/camino-inca-1.jpg')}}" class="object-cover h-10 w-10 rounded-full transform hover:scale-150 transition duration-500">
-                            <span class="lg:text-sm text-xs text-gray-500 hover:text-secondary">{{$paquete->titulo}}</span>
+                            <img src="{{asset($paquete->imagen)}}" class="object-cover h-10 w-10 rounded-full transform hover:scale-150 transition duration-500">
+                            <div class="lg:text-sm text-xs text-gray-500 hover:text-secondary transform hover:-translate-x-2 transition duration-500 ease-in-out">{{$paquete->titulo}}</div>
                         </div>
                     </a>
                     <hr class="mx-2">

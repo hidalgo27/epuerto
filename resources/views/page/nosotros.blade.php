@@ -76,8 +76,8 @@
                 @foreach ($paquetes as $paquete)
                     <a href="/en-tours/{{$paquete->url}}">
                         <div class="flex flex-cols-2 px-2 py-5 lg:gap-5 gap-2 items-center">
-                            <img src="{{asset('images/tour/camino-inca-1.jpg')}}" class="object-cover h-10 w-10 rounded-full transform hover:scale-150 transition duration-500">
-                            <span class="lg:text-sm text-xs text-gray-500 hover:text-secondary">{{$paquete->titulo}}</span>
+                            <img src="{{asset($paquete->imagen)}}" class="object-cover h-10 w-10 rounded-full transform hover:scale-150 transition duration-500">
+                            <div class="lg:text-sm text-xs text-gray-500 hover:text-secondary transform hover:-translate-x-2 transition duration-500 ease-in-out">{{$paquete->titulo}}</div>
                         </div>
                     </a>
                     <hr class="mx-2">

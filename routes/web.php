@@ -28,8 +28,9 @@ Route::get('/hoteles', [HomeController::class, 'hoteles'])->name('hoteles');
 Route::get('/contacto', [HomeController::class, 'contacto'])->name('contacto');
 Route::get('/noticias', [HomeController::class, 'noticias'])->name('noticias');
 Route::get('/nosotros', [HomeController::class, 'nosotros'])->name('nosotros');
+Route::post('/',[HomeController::class,'contact_form'])->name('contact_form');
+Route::post('/tour',[HomeController::class,'contact_form_tour'])->name('contact_form_tour');
 //form inquire
 Route::get('/loaddestinos/destinos', [FormpageController::class, 'destinoform'])->name('destinoform');
 Route::get('/loadcategory/category', [FormpageController::class, 'categoryform'])->name('categoryform');
 Route::post('/formulario-diseno', [FormpageController::class, 'formulario_diseno'])->name('formulario_diseno');
-

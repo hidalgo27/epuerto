@@ -9,6 +9,9 @@ use App\Models\THotel;
 use App\Models\TpaqueteItinerario;
 use App\Models\TItinerario;
 use App\Models\TDestino;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\URL;
 
 class HomeController extends Controller
 {
@@ -51,5 +54,68 @@ class HomeController extends Controller
     public function nosotros(){
         $paquetes=TPaquete::all();
         return view('page.nosotros',compact('paquetes'));
+    }
+    public function contact_form(Request $request){
+        $from = 'tania.vanessa609@gmail.com';
+        $nombre = $request->tNombre;
+        $email = $request->tEmail;
+        $celular = $request->tCelular;
+        $mensaje=$request->tMensaje;
+        $url3=$this->getUrl();
+        try {
+            Mail::send(['html' => 'email.emailClient'], ['nombre' => $nombre],
+                function ($messaje) use ($email, $nombre) { $messaje->to($email, $nombre)
+                    ->subject('EPUERTO')
+                    ->from('tania.vanessa609@gmail.com', 'EPUERTO');
+            });
+            Mail::send(['html' => 'email.emailContacto'], [
+                'nombre' => $nombre,
+                'email' => $email,
+                'celular' => $celular,
+                'url' =>$url3,
+                'mensaje' => $mensaje,],
+                function ($messaje) use ($from) { $messaje->to($from, 'EPUERTO')
+                    ->subject('EPUERTO - Formulario de Contacto')
+                    ->from('tania.vanessa609@gmail.com', 'EPUERTO');
+            });
+            return Redirect::to(URL::previous() . "#contacto")->with('status', 'Registro satisfactorio.');
+        }
+        catch (Exception $e){
+            return $e;
+        }
+    }
+    public function contact_form_tour(Request $request){
+        $from = 'tania.vanessa609@gmail.com';
+        $nombre = $request->tNombre;
+        $email = $request->tEmail;
+        $celular = $request->tCelular;
+        $mensaje=$request->tMensaje;
+        $url3=$this->getUrl();
+        try {
+            Mail::send(['html' => 'email.emailClient'], ['nombre' => $nombre],
+                function ($messaje) use ($email, $nombre) { $messaje->to($email, $nombre)
+                    ->subject('EPUERTO')
+                    ->from('tania.vanessa609@gmail.com', 'EPUERTO');
+            });
+            Mail::send(['html' => 'email.emailContacto'], [
+                'nombre' => $nombre,
+                'email' => $email,
+                'celular' => $celular,
+                'url' =>$url3,
+                'mensaje' => $mensaje,],
+                function ($messaje) use ($from) { $messaje->to($from, 'EPUERTO')
+                    ->subject('EPUERTO - Formulario de Contacto TOUR')
+                    ->from('tania.vanessa609@gmail.com', 'EPUERTO');
+            });
+            return Redirect::to(URL::previous() . "#contacto_tour")->with('status2', 'Registro satisfactorio.');
+        }
+        catch (Exception $e){
+            return $e;
+        }
+    }
+    public function getUrl(){
+        $url=url()->previous();
+        $url2=explode('http://127.0.0.1:8000/',$url);
+        return $url3=str_replace('-', ' ', $url2[1]);
     }
 }

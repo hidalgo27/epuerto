@@ -21,7 +21,7 @@
     }
     /* :checked - resize to full height */
     .tab input:checked ~ .tab-content {
-    max-height: 100vh;
+    max-height: 1000vh;
     }
     .tab input:checked + label{
     font-size: 1rem; 
