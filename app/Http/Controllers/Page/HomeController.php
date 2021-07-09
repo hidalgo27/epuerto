@@ -85,7 +85,7 @@ class HomeController extends Controller
         }
     }
     public function contact_form_tour(Request $request){
-        $from = 'tania.vanessa609@gmail.com';
+        $from = 'percy@epuerto.com';
         $nombre = $request->tNombre;
         $email = $request->tEmail;
         $celular = $request->tCelular;
@@ -95,7 +95,7 @@ class HomeController extends Controller
             Mail::send(['html' => 'email.emailClient'], ['nombre' => $nombre],
                 function ($messaje) use ($email, $nombre) { $messaje->to($email, $nombre)
                     ->subject('EPUERTO')
-                    ->from('tania.vanessa609@gmail.com', 'EPUERTO');
+                    ->from('percy@epuerto.com', 'EPUERTO');
             });
             Mail::send(['html' => 'email.emailContacto'], [
                 'nombre' => $nombre,
@@ -105,7 +105,7 @@ class HomeController extends Controller
                 'mensaje' => $mensaje,],
                 function ($messaje) use ($from) { $messaje->to($from, 'EPUERTO')
                     ->subject('EPUERTO - Formulario de Contacto TOUR')
-                    ->from('tania.vanessa609@gmail.com', 'EPUERTO');
+                    ->from('percy@epuerto.com', 'EPUERTO');
             });
             return Redirect::to(URL::previous() . "#contacto_tour")->with('status2', 'Registro satisfactorio.');
         }
@@ -115,7 +115,7 @@ class HomeController extends Controller
     }
     public function getUrl(){
         $url=url()->previous();
-        $url2=explode('http://127.0.0.1:8000/',$url);
+        $url2=explode(env('APP_URL'),$url);
         return $url3=str_replace('-', ' ', $url2[1]);
     }
 }
