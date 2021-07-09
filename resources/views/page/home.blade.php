@@ -31,7 +31,7 @@
         {{--            <iframe src="https://player.vimeo.com/video/361847703?background=1&autoplay=1&loop=1&title=0&byline=0&portrait=0&muted=1"--}}
         {{--                    frameborder="0"  class="absolute z-10 w-auto min-w-full min-h-full max-w-none"></iframe>--}}
         {{--        </div>--}}
-        <div class="absolute z-10 w-auto min-w-full min-h-full bg-gray-700 max-w-none opacity-50">
+        <div class="absolute z-10 w-auto min-w-full min-h-full bg-gray-900 max-w-none opacity-20">
 
         </div>
 
