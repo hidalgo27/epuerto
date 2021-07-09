@@ -8,11 +8,12 @@
 
         </div>
 
-        <div class="relative grid mt-48 grid-cols-1 gap-12 place-items-center text-center justify-center text-white z-30">
+        <div class="relative grid grid-cols-1 gap-12 place-items-center text-center justify-center text-white z-30">
             <div class="relative text-center">
-                <h1 class="text-xl mb-6 font-bold font-cinzel text-secondary">Epuerto Perú Travel & Tours</h1>
+                <img src="{{asset('images/logo-registrado.png')}}" alt="" class="w-32 mx-auto bg-gray-50 bg-opacity-60 p-3 rounded-lg">
+                <h1 class="text-xl mb-6 font-bold font-cinzel mt-6 text-secondary">Epuerto Perú Travel & Tours</h1>
                 <h3 class="md:text-5xl text-3xl font-semibold tracking-widest text-gray-50">EXPERIENCIAS Y CONEXIONES <br> ÚNICAS COMO NINGUNA OTRA.</h3>
-                <h4 class="md:text-9xl text-5xl font-bold inset-0 text-white text-opacity-10 absolute top-0">EPUERTO</h4>
+                <h4 class="md:text-9xl text-5xl font-bold inset-0 flex items-center justify-center text-white text-opacity-10 absolute">EPUERTO</h4>
             </div>
         </div>
         <div class="relative z-30 p-5 flex justify-center">
@@ -30,7 +31,7 @@
         {{--            <iframe src="https://player.vimeo.com/video/361847703?background=1&autoplay=1&loop=1&title=0&byline=0&portrait=0&muted=1"--}}
         {{--                    frameborder="0"  class="absolute z-10 w-auto min-w-full min-h-full max-w-none"></iframe>--}}
         {{--        </div>--}}
-        <div class="absolute z-10 w-auto min-w-full min-h-full bg-gray-900 max-w-none opacity-50">
+        <div class="absolute z-10 w-auto min-w-full min-h-full bg-gray-700 max-w-none opacity-50">
 
         </div>
 
@@ -72,7 +73,7 @@
             <p class="text-gray-500 mb-9 block text-gray-200">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid expedita illo molestias reiciendis.</p>
             <p class="text-white text-xs tracking-tight mb-12">LLAME AHORA</p>
             <div class="transform hover:-translate-y-3 transition duration-500 ease-in-out">
-                <a href="" class="transform hover:-translate-y-3 transition duration-500 ease-in-out rounded-full py-4 px-9 bg-secondary text-white text-xs font-semibold">+51 99877654</a>
+                <a href="https://api.whatsapp.com/send?phone=51984645720" target="_blank" class="transform hover:-translate-y-3 transition duration-500 ease-in-out rounded-full py-4 px-6 bg-secondary text-white text-xs font-semibold">+51 984 645 720</a>
             </div>
         </div>
     </section>
@@ -98,7 +99,7 @@
                 <div class="p-9 block">
                     <h2 class="text-xl font-bold">{{$paquete->titulo}} <span class="text-secondary"><span class="text-xs align-top">Desde</span>{{$paquete->precio_paquetes->where('estrellas', 2)->first()->precio_s}}<span class="text-xs">usd</span></span></h2>
                     <div class="text-sm mb-7 text-gray-500 mt-3">{!!Str::limit($paquete->descripcion, 100,$end='...')!!}</div>
-    
+
                     <div class="transform hover:-translate-y-3 transition duration-500 ease-in-out">
                         <a href="/en-tours/{{$paquete->url}}" class="transform hover:-translate-y-3 transition duration-500 ease-in-out rounded-full py-4 px-9 bg-secondary text-xs text-white font-semibold">VER DETALLES</a>
                     </div>
@@ -164,7 +165,7 @@
                 <div class="md:p-9 p-5 block">
                     <h2 class="text-xl font-bold text-primary">{{$destino->nombre}}</h2>
                     <div class="text-sm mb-7 text-gray-500 mt-3">{!!Str::limit($destino->resumen, 100,$end='...')!!}</div>
-    
+
                     <div class="transform hover:-translate-y-3 transition duration-500 ease-in-out">
                         <a href="/informacion-de-viaje#{{$destino->nombre}}" class="transform hover:-translate-y-3 transition duration-500 ease-in-out rounded-full py-4 px-9 bg-secondary text-xs text-white font-semibold">VER DETALLES</a>
                     </div>
@@ -173,5 +174,5 @@
         @endforeach
     </section>
 
-    
+
 @endsection

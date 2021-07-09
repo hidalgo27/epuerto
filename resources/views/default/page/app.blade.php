@@ -44,11 +44,12 @@
 {{--        </button>--}}
 {{--    </div>--}}
 
-{{--    <div class="fixed bottom-0 right-0 z-40 p-8">--}}
-{{--        <a href="https://api.whatsapp.com/send?phone=51958123295" target="_blank">--}}
-{{--            <img src="{{asset('images/whatsapp-i.png')}}" alt="" class="w-20 animate-bounce">--}}
-{{--        </a>--}}
-{{--    </div>--}}
+    <div class="fixed bottom-0 right-0 z-40 p-2">
+        <a href="https://api.whatsapp.com/send?phone=51984645720" target="_blank">
+            <img src="{{asset('images/whatsapp-i.png')}}" alt="" class="w-20 animate-bounce">
+        </a>
+    </div>
+
     <header>
         <div class="relative shadow h-20 bg-primary dark:bg-gray-800 items-center flex flex-wrap z-30">
 
