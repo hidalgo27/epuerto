@@ -58,12 +58,14 @@
     </div>
 
     <header>
-        <div class="relative shadow h-20 bg-primary dark:bg-gray-800 items-center flex flex-wrap z-30">
-
+        <div class="relative shadow h-20 bg-primary dark:bg-gray-800 flex flex-wrap z-30">
+            <div class="pt-1 mx-auto">
+                <a href="http://en.epuertotravelperu.com"><img src="{{asset('images/iconos/reino-unido.png')}}" alt="" class="w-9"></a>
+            </div>
         </div>
     </header>
 
-    <nav class="banner-wrapper sticky -mt-10 lg:px-24 px-4 top-0 z-50">
+    <nav class="banner-wrapper sticky -mt-9 lg:px-24 px-4 top-0 z-50">
         <div class="banner">
             <!-- This example requires Tailwind CSS v2.0+ -->
             <div class="bg-white dark:bg-gray-800 rounded-xl shadow dark:bg-gray-800">
