@@ -97,7 +97,7 @@
                     </button>
                 </div>
             </div>
-            <div class="items-center bg-primary bg-opacity-10 py-4 px-24 justify-center md:flex toggle hidden z-30">
+            <div class="items-center bg-primary bg-opacity-80 py-4 px-24 justify-center md:flex toggle hidden z-30">
                 <div class="flex flex-col md:flex-row lg:mx-6 md::gap-0 gap-2">
                     <a class="text-gray-50 my-1 text-sm font-medium dark:text-gray-200 hover:text-secondary dark:hover:text-indigo-400 md:mx-4 md:my-0 transform hover:-translate-x-2 transition duration-500 ease-in-out"  href="/nosotros">Nosotros</a>
                     <a class="text-gray-50 my-1 text-sm font-medium dark:text-gray-200 hover:text-secondary dark:hover:text-indigo-400 md:mx-4 md:my-0 transform hover:-translate-x-2 transition duration-500 ease-in-out" href="/en-tours">Best Cusco Tours</a>
