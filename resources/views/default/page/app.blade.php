@@ -43,7 +43,7 @@
 </head>
 <body>
 <div id="app">
-{{--    <div class="fixed z-40 p-8">--}}
+{{--    <div class="fixed right-0 z-40 p-8">--}}
 {{--        <button onclick="openModal(true)" class="rounded text-gray-50 focus:outline-none">--}}
 {{--            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">--}}
 {{--                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />--}}
@@ -51,70 +51,96 @@
 {{--        </button>--}}
 {{--    </div>--}}
 
-    <div class="fixed bottom-0 right-0 z-40 p-2">
+    <div class="fixed bottom-0 right-0 z-50 p-2">
         <a href="https://api.whatsapp.com/send?phone=51984645720" target="_blank">
             <img src="{{asset('images/whatsapp-i.png')}}" alt="" class="w-20 animate-bounce">
         </a>
     </div>
 
-    <header>
-        <div class="relative flex justify-between shadow h-20 bg-primary dark:bg-gray-800 flex flex-wrap z-30">
-            <div class="pt-1">
-                <a href="http://en.epuertotravelperu.com"><img src="{{asset('images/iconos/reino-unido.png')}}" alt="" class="w-9 ml-3"></a>
-            </div>
-
-            <div class="flex flex-row pt-2 px-3 gap-3">
-                <a href="https://www.facebook.com/EpuertoTravelPeru" target="_blank"><img src="{{asset('images/iconos/facebook.png')}}" class="h-7 w-7 transform hover:scale-125 transition duration-500 "></a>
-                <a href="https://www.youtube.com/user/EpuertoPeruTravelPer" target="_blank"><img src="{{asset('images/iconos/youtube.png')}}" class="h-7 w-7 transform hover:scale-125 transition duration-500"></a>
-                <div class=" bg-green-500 rounded-full h-7 w-7 flex items-center justify-center transform hover:scale-125 transition duration-500">
-                    <a href="https://www.tripadvisor.com.pe/Attraction_Review-g294314-d3836582-Reviews-Epuerto_Peru_Travel_Tours-Cusco_Cusco_Region.html" target="_blank"><img src="{{asset('images/iconos/tripadvisor.png')}}" class="h-8 w-8 "></a>
+    <header class="relative flex flex-col justify-between h-screen overflow-hidden">
+        <div class="flex flex-col">
+            <div class="relative items-start shadow grid grid-cols-3 justify-between z-30">
+                <div class="p-8 flex inline-flex text-gray-50 items-center invisible sm:visible">
+                    <a href="http://en.epuertotravelperu.com"><img src="{{asset('images/iconos/reino-unido.png')}}" alt="" class="w-9 ml-3"></a>
+                    <span class="mx-2">|</span>
+                    <i data-feather="phone" class="" stroke-width="1"></i> +51 984 645720
+                </div>
+                <div class="p-3">
+                    <a href="/"><img src="<?php echo e(asset('images/epuerto-logo.png')); ?>" alt="" class="w-32 mx-auto"></a>
+                </div>
+                <div class="flex justify-end p-8 invisible sm:visible">
+                    <a href="https://www.facebook.com/EpuertoTravelPeru" target="_blank" class="mx-2">
+                        <i data-feather="facebook" class="text-gray-50" stroke-width="1"></i>
+                    </a>
+                    <a href="https://www.youtube.com/user/EpuertoPeruTravelPer" target="_blank" class="mx-2">
+                        <i data-feather="youtube" class="text-gray-50" stroke-width="1"></i>
+                    </a>
+                    <a href="https://www.instagram.com/apuantasaqa/" target="_blank" class="mx-2">
+                        <img src="{{asset('images/iconos/ico_tripadvisor.png')}}" alt="" class="w-6">
+                    </a>
                 </div>
             </div>
 
+            <div class="flex z-30 px-24 items-center justify-center">
+            {{--                            <div>--}}
+            {{--                                <a class="text-2xl font-bold text-gray-800 dark:text-white lg:text-3xl hover:text-gray-700 dark:hover:text-gray-300" href="/">--}}
+            {{--                                    <img src="{{asset('images/logo-epuerto.png')}}" alt="" class="w-60">--}}
+            {{--                                </a>--}}
+            {{--                            </div>--}}
+
+            <!-- Mobile menu button -->
+                <div class="flex md:hidden">
+                    <button id="clos"type="button" class="text-gray-50 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400" aria-label="toggle menu">
+                        <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
+                            <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="items-center bg-primary bg-opacity-10 py-4 px-24 justify-center md:flex toggle hidden z-30">
+                <div class="flex flex-col md:flex-row lg:mx-6 md::gap-0 gap-2">
+                    <a class="text-gray-50 my-1 text-sm font-medium dark:text-gray-200 hover:text-secondary dark:hover:text-indigo-400 md:mx-4 md:my-0 transform hover:-translate-x-2 transition duration-500 ease-in-out"  href="/nosotros">Nosotros</a>
+                    <a class="text-gray-50 my-1 text-sm font-medium dark:text-gray-200 hover:text-secondary dark:hover:text-indigo-400 md:mx-4 md:my-0 transform hover:-translate-x-2 transition duration-500 ease-in-out" href="/en-tours">Best Cusco Tours</a>
+                    <a class="text-gray-50 my-1 text-sm font-medium dark:text-gray-200 hover:text-secondary dark:hover:text-indigo-400 md:mx-4 md:my-0 transform hover:-translate-x-2 transition duration-500 ease-in-out" href="/informacion-de-viaje">Información</a>
+                    <a class="text-gray-50 my-1 text-sm font-medium dark:text-gray-200 hover:text-secondary dark:hover:text-indigo-400 md:mx-4 md:my-0 transform hover:-translate-x-2 transition duration-500 ease-in-out" href="/hoteles">Hoteles</a>
+                    <a class="text-gray-50 my-1 text-sm font-medium dark:text-gray-200 hover:text-secondary dark:hover:text-indigo-400 md:mx-4 md:my-0 transform hover:-translate-x-2 transition duration-500 ease-in-out" href="/f-a-q">FAQs</a>
+                    <a class="text-gray-50 my-1 text-sm font-medium dark:text-gray-200 hover:text-secondary dark:hover:text-indigo-400 md:mx-4 md:my-0 transform hover:-translate-x-2 transition duration-500 ease-in-out" href="/contacto">Contacto</a>
+                </div>
+
+            </div>
         </div>
-    </header>
+        <div class="relative grid grid-cols-1 gap-6 place-items-center text-center text-white z-30">
 
-    <nav class="banner-wrapper sticky -mt-9 lg:px-24 px-4 top-0 z-50">
-        <div class="banner">
-            <!-- This example requires Tailwind CSS v2.0+ -->
-            <div class="bg-white dark:bg-gray-800 rounded-xl shadow dark:bg-gray-800">
-                <nav class="dark:bg-gray-800">
-                    <div class="container lg:px-6 px-3 py-2 mx-auto md:flex md:justify-between md:items-center">
-                        <div class="flex items-center justify-between">
-                            <div>
-                                <a class="text-2xl font-bold text-gray-800 dark:text-white lg:text-3xl hover:text-gray-700 dark:hover:text-gray-300" href="/">
-                                    <img src="{{asset('images/logo-epuerto.png')}}" alt="" class="w-60">
-                                </a>
-                            </div>
-
-                            <!-- Mobile menu button -->
-                            <div class="flex md:hidden">
-                                <button id="clos"type="button" class="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400" aria-label="toggle menu">
-                                    <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
-                                        <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
-                        <div class="items-center md:flex toggle hidden">
-                            <div class="flex flex-col md:flex-row lg:mx-6 md::gap-0 gap-2">
-                                <a class="my-1 text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-secondary dark:hover:text-indigo-400 md:mx-4 md:my-0 transform hover:-translate-x-2 transition duration-500 ease-in-out"  href="/nosotros">Nosotros</a>
-                                <a class="my-1 text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-secondary dark:hover:text-indigo-400 md:mx-4 md:my-0 transform hover:-translate-x-2 transition duration-500 ease-in-out" href="/en-tours">Best Cusco Tours</a>
-                                <a class="my-1 text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-secondary dark:hover:text-indigo-400 md:mx-4 md:my-0 transform hover:-translate-x-2 transition duration-500 ease-in-out" href="/informacion-de-viaje">Información</a>
-                                <a class="my-1 text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-secondary dark:hover:text-indigo-400 md:mx-4 md:my-0 transform hover:-translate-x-2 transition duration-500 ease-in-out" href="/hoteles">Hoteles</a>
-                                <a class="my-1 text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-secondary dark:hover:text-indigo-400 md:mx-4 md:my-0 transform hover:-translate-x-2 transition duration-500 ease-in-out" href="/f-a-q">FAQs</a>
-                                <a class="my-1 text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-secondary dark:hover:text-indigo-400 md:mx-4 md:my-0 transform hover:-translate-x-2 transition duration-500 ease-in-out" href="/contacto">Contacto</a>
-                            </div>
-
-                        </div>
-                    </div>
-                </nav>
+            <div>
+                @yield('title_header')
             </div>
 
         </div>
-    </nav>
+        <div class="relative z-30 p-5 flex justify-center">
+            <a href="#" class="text-gray-50">
+                <svg xmlns="http://www.w3.org/2000/svg" class="animate-bounce h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+            </a>
+        </div>
+        <video autoplay loop muted class="absolute z-10 w-auto min-w-full min-h-full max-w-none">
+                        <source src="https://assets.mixkit.co/videos/preview/mixkit-set-of-plateaus-seen-from-the-heights-in-a-sunset-26070-large.mp4" type="video/mp4" />Your browser does not support the video tag.
+{{--            <source src="{{asset('media/intro.mp4')}}" type="video/mp4" />Your browser does not support the video tag.--}}
+        </video>
+        {{--        <div class="vimeo-wrapper absolute z-10 w-auto min-w-full min-h-full max-w-none">--}}
+        {{--            <iframe src="https://player.vimeo.com/video/361847703?background=1&autoplay=1&loop=1&title=0&byline=0&portrait=0&muted=1"--}}
+        {{--                    frameborder="0"  class="absolute z-10 w-auto min-w-full min-h-full max-w-none"></iframe>--}}
+        {{--        </div>--}}
+        <div class="absolute z-10 w-auto min-w-full min-h-full bg-gray-900 max-w-none opacity-50">
+
+        </div>
+        <div class="bg-footer-texture bg-repeat-x absolute h-6 bg-12 bottom-0 w-full z-30"></div>
+
+    </header>
+
+
+
+
 
     @yield('content')
 
@@ -159,14 +185,7 @@
                         <span>Epuerto</span><span class="text-secondary"> Perú</span>
                     </div>
                     <p class="p-5 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas molestiae provident illo, eveniet qui deleniti.<p>
-                    <span class="font-semibold text-sm">Visita Nuestras redes sociales</span>
-                    <div class="flex flex-row pt-5 px-3 gap-3">
-                        <a href="https://www.facebook.com/EpuertoTravelPeru" target="_blank"><img src="{{asset('images/iconos/facebook.png')}}" class="h-10 w-10 transform hover:scale-125 transition duration-500 "></a>
-                        <a href="https://www.youtube.com/user/EpuertoPeruTravelPer" target="_blank"><img src="{{asset('images/iconos/youtube.png')}}" class="h-10 w-10 transform hover:scale-125 transition duration-500"></a>
-                        <div class=" bg-green-500 rounded-full h-10 w-10 flex items-center justify-center transform hover:scale-125 transition duration-500">
-                            <a href="https://www.tripadvisor.com.pe/Attraction_Review-g294314-d3836582-Reviews-Epuerto_Peru_Travel_Tours-Cusco_Cusco_Region.html" target="_blank"><img src="{{asset('images/iconos/tripadvisor.png')}}" class="h-8 w-8 "></a>
-                        </div>
-                    </div>
+
                 </div>
                 <div class="text-white">
                     <span class="font-semibold uppercase text-sm">Contacto</span>
@@ -189,9 +208,15 @@
                         <span>Jr. Cusco L-10 Dpto. 602 Wanchaq – Cusco – Peru</span>
                     </div>
                 </div>
-                <div class="flex flex-col gap-2">
-                    <a href="https://www.iglta.org/" target="_blank"><img src="{{asset('images/iglta.jpg')}}" class="w-48"></a>
-                    <a href="https://www.gob.pe/promperu" target="_blank"><img src="{{asset('images/logo_promperu.jpg')}}" class="w-48 h-24 object-cover object-center"></a>
+                <div class="flex flex-col gap-2 text-white">
+                    <span class="font-semibold uppercase text-sm">Visita Nuestras redes sociales</span>
+                    <div class="flex flex-row pt-5 px-3 gap-3">
+                        <a href="https://www.facebook.com/EpuertoTravelPeru" target="_blank"><img src="{{asset('images/iconos/face2.png')}}" class="h-20 w-20 transform hover:scale-125 transition duration-500 "></a>
+                        <a href="https://www.youtube.com/user/EpuertoPeruTravelPer" target="_blank"><img src="{{asset('images/iconos/you2.png')}}" class="h-20 w-20 transform hover:scale-125 transition duration-500"></a>
+                        <div class=" bg-green-500 rounded-full h-20 w-20 flex items-center justify-center transform hover:scale-125 transition duration-500">
+                            <a href="https://www.tripadvisor.com.pe/Attraction_Review-g294314-d3836582-Reviews-Epuerto_Peru_Travel_Tours-Cusco_Cusco_Region.html" target="_blank"><img src="{{asset('images/iconos/ico_tripadvisor.png')}}" class="h-8 w-8 "></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
