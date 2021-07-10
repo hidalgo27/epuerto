@@ -186,7 +186,7 @@
 
     </section>
     <section id="contacto">
-        <div style="background-image: url('{{asset('images/mampi-2.jpg')}}');" class="bg-fixed bg-center flex justify-end px-24 lg:bg-left bg-right py-10">
+        <div style="background-image: url('{{asset('images/mampi-2.jpg')}}');" class=" flex justify-end px-24 lg:bg-left bg-right py-10">
             @if (session('status'))
             <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
                 <strong class="font-bold">Gracias por contactar con nosotros</strong><br>
