@@ -143,9 +143,50 @@
 
 
     @yield('content')
+    <section class="grid grid-cols-2 sm:grid-cols-6 px-24 gap-12 sm:gap-24 bg-gray-100 py-6">
+        <div class="">
+            <a class="venobox block relative" data-gall="myGallery" framewidth="100" href="{{asset('doc/marca-peru.jpg')}}">
+                <img src="{{asset('images/logos/marca-peru.png')}}" alt="" class="object-contain">
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="bg-primary bg-opacity-70 p-1 rounded-md h-5 w-5 text-gray-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                    </svg>
+                </div>
+            </a>
+        </div>
+        <div class="">
+            <a class="venobox block relative" data-gall="myGallery"  href="{{asset('doc/Caltur.jpg')}}">
+                <img src="{{asset('images/logos/caltur.png')}}" alt="" class="object-contain">
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="bg-primary bg-opacity-70 p-1 rounded-md h-5 w-5 text-gray-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                    </svg>
+                </div>
+            </a>
+        </div>
+        <div class="">
+            <a class="venobox block relative" data-gall="myGallery"  href="{{asset('doc/Dircetur.jpg')}}">
+                <img src="{{asset('images/logos/gercetur.png')}}" alt="" class="object-contain">
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="bg-primary bg-opacity-70 p-1 rounded-md h-5 w-5 text-gray-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                    </svg>
+                </div>
+            </a>
+        </div>
+        <div class="">
+            <img src="{{asset('images/logos/iglta.jpg')}}" alt="" class="object-contain">
+        </div>
+        <div class="">
+            <img src="{{asset('images/logos/promperu.png')}}" alt="" class="object-contain">
+        </div>
+        <div class="">
+            <img src="{{asset('images/logos/logo-registrado.png')}}" alt="" class="object-contain">
+        </div>
 
+    </section>
     <section id="contacto">
-        <div style="background-image: url('{{asset('images/machu-picchu.jpg')}}');" class="bg-fixed bg-center lg:bg-left bg-right px-2 py-10">
+        <div style="background-image: url('{{asset('images/mampi-2.jpg')}}');" class="bg-fixed bg-center bg-cover lg:bg-left bg-right px-2 py-10">
             @if (session('status'))
             <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
                 <strong class="font-bold">Gracias por contactar con nosotros</strong><br>
@@ -177,6 +218,7 @@
             </div>
         </div>
     </section>
+
     <footer class="relative bg-primary pt-6">
         <div class="bg-footer-texture bg-repeat-x bg-12 top-0 w-full z-30 p-12">
             <div class="grid md:grid-cols-3 grid-cols-1 gap-8">
