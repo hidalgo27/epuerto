@@ -116,7 +116,7 @@
 
     <section class="px-24 mt-24 grid grid-cols-3 sm:grid-cols-6 gap-4 bg-gray-200 py-6">
         <div class="p-3">
-            <a class="venobox" data-gall="myGallery"  href="{{asset('doc/marca-peru.pdf')}}">
+            <a class="venobox" data-gall="myGallery"  href="{{asset('doc/marca-peru.jpg')}}">
                 <img src="{{asset('images/logos/marca-peru.png')}}" alt="">
             </a>
         </div>
@@ -124,12 +124,12 @@
             <a href="https://www.tripadvisor.com.pe/Attraction_Review-g294314-d3836582-Reviews-Epuerto_Peru_Travel_Tours-Cusco_Cusco_Region.html" target="_blank"><img src="{{asset('images/logos/tripadvisor.png')}}" alt=""></a>
         </div>
         <div class="p-3">
-            <a class="venobox" data-gall="myGallery"  href="{{asset('doc/Caltur.pdf')}}">
+            <a class="venobox" data-gall="myGallery"  href="{{asset('doc/Caltur.jpg')}}">
                 <img src="{{asset('images/logos/caltur.png')}}" alt="">
             </a>
         </div>
         <div class="p-3">
-            <a class="venobox" data-gall="myGallery"  href="{{asset('doc/Dircetur.pdf')}}">
+            <a class="venobox" data-gall="myGallery"  href="{{asset('doc/Dircetur.jpg')}}">
                 <img src="{{asset('images/logos/dircetur.png')}}" alt="">
             </a>
         </div>
