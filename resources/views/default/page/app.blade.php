@@ -138,10 +138,6 @@
 
     </header>
 
-
-
-
-
     @yield('content')
     <section class="grid grid-cols-2 sm:grid-cols-6 px-24 gap-12 sm:gap-24 bg-gray-100 py-6">
         <div class="">

@@ -8,7 +8,7 @@
     <h4 class="md:text-8xl text-5xl font-bold inset-0 text-white text-opacity-10 absolute top-0">{{$paquete->titulo}}</h4>
 @endsection
 @section('content')
-   
+
       <div class="grid md:grid-cols-6 grid-cols-1 md:gap-16 p-10 text-gray-700">
          <div class="md:col-span-4 lg:ml-8 mt-10">
             <hr>
