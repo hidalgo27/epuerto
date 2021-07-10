@@ -201,8 +201,8 @@
         </div>
     </footer>
 </div>
-<script src="{{asset('js/app.js')}}"></script>
 @stack('scripts')
+<script src="{{asset('js/app.js')}}"></script>
 <script src="{{asset('js/plugins.js')}}"></script>
 <script>
     (() => {
