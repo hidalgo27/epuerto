@@ -11,30 +11,30 @@
 
     <section class="mb-12 grid grid-cols-2 sm:grid-cols-6 px-24 gap-12 sm:gap-24 bg-gray-100 py-6">
         <div class="">
-            <a class="venobox block relative" data-gall="myGallery" framewidth="100" href="{{asset('doc/marca-peru.jpg')}}">
+            <a class="venobox block relative group" data-gall="myGallery" framewidth="100" href="{{asset('doc/marca-peru.jpg')}}">
                 <img src="{{asset('images/logos/marca-peru.png')}}" alt="" class="object-contain">
-                <div class="absolute inset-0 flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="bg-primary bg-opacity-70 p-1 rounded-md h-5 w-5 text-gray-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="bg-primary bg-opacity-70 p-1 rounded-md h-8 w-8 text-gray-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
                     </svg>
                 </div>
             </a>
         </div>
         <div class="">
-            <a class="venobox block relative" data-gall="myGallery"  href="{{asset('doc/Caltur.jpg')}}">
+            <a class="venobox block relative group" data-gall="myGallery"  href="{{asset('doc/Caltur.jpg')}}">
                 <img src="{{asset('images/logos/caltur.png')}}" alt="" class="object-contain">
-                <div class="absolute inset-0 flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="bg-primary bg-opacity-70 p-1 rounded-md h-5 w-5 text-gray-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="bg-primary bg-opacity-70 p-1 rounded-md h-8 w-8 text-gray-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
                     </svg>
                 </div>
             </a>
         </div>
         <div class="">
-            <a class="venobox block relative" data-gall="myGallery"  href="{{asset('doc/Dircetur.jpg')}}">
+            <a class="venobox block relative group" data-gall="myGallery"  href="{{asset('doc/Dircetur.jpg')}}">
                 <img src="{{asset('images/logos/gercetur.png')}}" alt="" class="object-contain">
-                <div class="absolute inset-0 flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="bg-primary bg-opacity-70 p-1 rounded-md h-5 w-5 text-gray-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="bg-primary bg-opacity-70 p-1 rounded-md h-8 w-8 text-gray-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
                     </svg>
                 </div>
@@ -52,46 +52,46 @@
 
     </section>
 
-    <section class="grid lg:grid-cols-4 md:grid-cols-2 gap-6 md:px-24 px-10 relative">
-        <div class="text-center shadow-lg rounded-lg md:px-12 px-5 py-8 bg-white">
-            <svg  xmlns="http://www.w3.org/2000/svg" class="h-20 w-16 mx-auto text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-            </svg>
-            <h3 class="font-semibold text-primary text-lg  mt-3 mb-4">Servicio Privado</h3>
-            <p class="text-gray-500 mb-9 block">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid expedita illo molestias reiciendis.</p>
-            <div class="transform hover:-translate-y-3 transition duration-500 ease-in-out">
-                <a href="" class="transform hover:-translate-y-3 transition duration-500 ease-in-out rounded-full py-4 px-9 bg-secondary text-white text-xs font-semibold">VER MÁS</a>
-            </div>
-        </div>
-        <div class="text-center shadow-lg rounded-lg md:px-12 px-5 py-8 bg-white">
-            <svg  xmlns="http://www.w3.org/2000/svg" class="h-20 w-16 mx-auto text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
-            </svg>
-            <h3 class="font-semibold text-primary text-lg  mt-3 mb-4">Soporte 24/7</h3>
-            <p class="text-gray-500 mb-9 block">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid expedita illo molestias reiciendis.</p>
-            <div class="transform hover:-translate-y-3 transition duration-500 ease-in-out">
-                <a href="" class="transform hover:-translate-y-3 transition duration-500 ease-in-out rounded-full py-4 px-9 bg-secondary text-white text-xs font-semibold">VER MÁS</a>
-            </div>
-        </div>
-        <div class="text-center shadow-lg rounded-lg md:px-12 px-5 py-8 bg-white">
-            <svg  xmlns="http://www.w3.org/2000/svg" class="h-20 w-16 mx-auto text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-            <h3 class="font-semibold text-primary text-lg  mt-3 mb-4">Mejores Precios</h3>
-            <p class="text-gray-500 mb-9 block">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid expedita illo molestias reiciendis.</p>
-            <div class="transform hover:-translate-y-3 transition duration-500 ease-in-out">
-                <a href="" class="transform hover:-translate-y-3 transition duration-500 ease-in-out rounded-full py-4 px-9 bg-secondary text-white text-xs font-semibold">VER MÁS</a>
-            </div>
-        </div>
-        <div class="text-center shadow-lg rounded-lg md:px-12 px-5 py-8 bg-primary">
-            <h3 class="font-semibold text-gray-50 text-lg  mt-3 mb-4">Reservar Ahora</h3>
-            <p class="text-gray-500 mb-9 block text-gray-200">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid expedita illo molestias reiciendis.</p>
-            <p class="text-white text-xs tracking-tight mb-12">LLAME AHORA</p>
-            <div class="transform hover:-translate-y-3 transition duration-500 ease-in-out">
-                <a href="https://api.whatsapp.com/send?phone=51984645720" target="_blank" class="transform hover:-translate-y-3 transition duration-500 ease-in-out rounded-full py-4 px-6 bg-secondary text-white text-xs font-semibold">+51 984 645 720</a>
-            </div>
-        </div>
-    </section>
+{{--    <section class="grid lg:grid-cols-4 md:grid-cols-2 gap-6 md:px-24 px-10 relative">--}}
+{{--        <div class="text-center shadow-lg rounded-lg md:px-12 px-5 py-8 bg-white">--}}
+{{--            <svg  xmlns="http://www.w3.org/2000/svg" class="h-20 w-16 mx-auto text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">--}}
+{{--                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />--}}
+{{--            </svg>--}}
+{{--            <h3 class="font-semibold text-primary text-lg  mt-3 mb-4">Servicio Privado</h3>--}}
+{{--            <p class="text-gray-500 mb-9 block">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid expedita illo molestias reiciendis.</p>--}}
+{{--            <div class="transform hover:-translate-y-3 transition duration-500 ease-in-out">--}}
+{{--                <a href="" class="transform hover:-translate-y-3 transition duration-500 ease-in-out rounded-full py-4 px-9 bg-secondary text-white text-xs font-semibold">VER MÁS</a>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--        <div class="text-center shadow-lg rounded-lg md:px-12 px-5 py-8 bg-white">--}}
+{{--            <svg  xmlns="http://www.w3.org/2000/svg" class="h-20 w-16 mx-auto text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">--}}
+{{--                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />--}}
+{{--            </svg>--}}
+{{--            <h3 class="font-semibold text-primary text-lg  mt-3 mb-4">Soporte 24/7</h3>--}}
+{{--            <p class="text-gray-500 mb-9 block">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid expedita illo molestias reiciendis.</p>--}}
+{{--            <div class="transform hover:-translate-y-3 transition duration-500 ease-in-out">--}}
+{{--                <a href="" class="transform hover:-translate-y-3 transition duration-500 ease-in-out rounded-full py-4 px-9 bg-secondary text-white text-xs font-semibold">VER MÁS</a>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--        <div class="text-center shadow-lg rounded-lg md:px-12 px-5 py-8 bg-white">--}}
+{{--            <svg  xmlns="http://www.w3.org/2000/svg" class="h-20 w-16 mx-auto text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">--}}
+{{--                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />--}}
+{{--            </svg>--}}
+{{--            <h3 class="font-semibold text-primary text-lg  mt-3 mb-4">Mejores Precios</h3>--}}
+{{--            <p class="text-gray-500 mb-9 block">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid expedita illo molestias reiciendis.</p>--}}
+{{--            <div class="transform hover:-translate-y-3 transition duration-500 ease-in-out">--}}
+{{--                <a href="" class="transform hover:-translate-y-3 transition duration-500 ease-in-out rounded-full py-4 px-9 bg-secondary text-white text-xs font-semibold">VER MÁS</a>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--        <div class="text-center shadow-lg rounded-lg md:px-12 px-5 py-8 bg-primary">--}}
+{{--            <h3 class="font-semibold text-gray-50 text-lg  mt-3 mb-4">Reservar Ahora</h3>--}}
+{{--            <p class="text-gray-500 mb-9 block text-gray-200">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid expedita illo molestias reiciendis.</p>--}}
+{{--            <p class="text-white text-xs tracking-tight mb-12">LLAME AHORA</p>--}}
+{{--            <div class="transform hover:-translate-y-3 transition duration-500 ease-in-out">--}}
+{{--                <a href="https://api.whatsapp.com/send?phone=51984645720" target="_blank" class="transform hover:-translate-y-3 transition duration-500 ease-in-out rounded-full py-4 px-6 bg-secondary text-white text-xs font-semibold">+51 984 645 720</a>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </section>--}}
 
     <section class="md:px-24 px-10 my-24 lg:justify-between lg:flex">
         <div class="relative">

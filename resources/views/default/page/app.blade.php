@@ -131,7 +131,7 @@
         {{--            <iframe src="https://player.vimeo.com/video/361847703?background=1&autoplay=1&loop=1&title=0&byline=0&portrait=0&muted=1"--}}
         {{--                    frameborder="0"  class="absolute z-10 w-auto min-w-full min-h-full max-w-none"></iframe>--}}
         {{--        </div>--}}
-        <div class="absolute z-10 w-auto min-w-full min-h-full bg-gray-900 max-w-none opacity-50">
+        <div class="absolute z-10 w-auto min-w-full min-h-full max-w-none">
 
         </div>
         <div class="bg-footer-texture bg-repeat-x absolute h-6 bg-12 bottom-0 w-full z-30"></div>
@@ -145,30 +145,30 @@
     @yield('content')
     <section class="grid grid-cols-2 sm:grid-cols-6 px-24 gap-12 sm:gap-24 bg-gray-100 py-6">
         <div class="">
-            <a class="venobox block relative" data-gall="myGallery" framewidth="100" href="{{asset('doc/marca-peru.jpg')}}">
+            <a class="venobox block relative group" data-gall="myGallery" framewidth="100" href="{{asset('doc/marca-peru.jpg')}}">
                 <img src="{{asset('images/logos/marca-peru.png')}}" alt="" class="object-contain">
-                <div class="absolute inset-0 flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="bg-primary bg-opacity-70 p-1 rounded-md h-5 w-5 text-gray-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="bg-primary bg-opacity-70 p-1 rounded-md h-8 w-8 text-gray-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
                     </svg>
                 </div>
             </a>
         </div>
         <div class="">
-            <a class="venobox block relative" data-gall="myGallery"  href="{{asset('doc/Caltur.jpg')}}">
+            <a class="venobox block relative group" data-gall="myGallery"  href="{{asset('doc/Caltur.jpg')}}">
                 <img src="{{asset('images/logos/caltur.png')}}" alt="" class="object-contain">
-                <div class="absolute inset-0 flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="bg-primary bg-opacity-70 p-1 rounded-md h-5 w-5 text-gray-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="bg-primary bg-opacity-70 p-1 rounded-md h-8 w-8 text-gray-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
                     </svg>
                 </div>
             </a>
         </div>
         <div class="">
-            <a class="venobox block relative" data-gall="myGallery"  href="{{asset('doc/Dircetur.jpg')}}">
+            <a class="venobox block relative group" data-gall="myGallery"  href="{{asset('doc/Dircetur.jpg')}}">
                 <img src="{{asset('images/logos/gercetur.png')}}" alt="" class="object-contain">
-                <div class="absolute inset-0 flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="bg-primary bg-opacity-70 p-1 rounded-md h-5 w-5 text-gray-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="bg-primary bg-opacity-70 p-1 rounded-md h-8 w-8 text-gray-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
                     </svg>
                 </div>
@@ -186,35 +186,38 @@
 
     </section>
     <section id="contacto">
-        <div style="background-image: url('{{asset('images/mampi-2.jpg')}}');" class=" flex justify-end px-24 lg:bg-left bg-right py-10">
+        <div class="flex justify-center items-center sm:justify-end lg:bg-left bg-right bg-green-500 relative">
+            <img src="{{asset('images/mampi-2.jpg')}}" alt="" class="object-cover w-full" style="height: 500px">
             @if (session('status'))
             <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
                 <strong class="font-bold">Gracias por contactar con nosotros</strong><br>
                 <span class="block sm:inline">Su mensaje fue enviado satisfactoriamente.</span>
             </div>
             @endif
-            <div class="lg:w-2/5 md:w-3/5 md:p-10 p-5 bg-gray-50 rounded md:ml-20 mt-4">
-                <h2 class="text-3xl mb-6 font-black text-primary">Formulario de Contacto</h2>
-                <form method="POST" action="{{route('contact_form')}}">
-                @csrf
-                <div class="mb-4">
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 placeholder-primary placeholder-opacity-70 leading-tight focus:outline-none focus:shadow-outline" name="tNombre" type="text" placeholder="Nombre" required>
+            <div class="absolute flex flex-col inset-0 flex items-end justify-center">
+                <div class="lg:w-2/5 md:w-3/5 md:p-10 bg-gray-50 p-6  sm:mr-24 flex flex-col rounded ">
+                    <h2 class="text-3xl mb-6 font-black text-primary">Formulario de Contacto</h2>
+                    <form method="POST" action="{{route('contact_form')}}">
+                        @csrf
+                        <div class="mb-4">
+                            <input class="shadow appearance-none border rounded w-full py-2 px-3 placeholder-primary placeholder-opacity-70 leading-tight focus:outline-none focus:shadow-outline" name="tNombre" type="text" placeholder="Nombre" required>
+                        </div>
+                        <div class="mb-4">
+                            <input class="shadow appearance-none border rounded w-full py-2 px-3 placeholder-primary placeholder-opacity-70 leading-tight focus:outline-none focus:shadow-outline" name="tEmail" type="text" placeholder="Correo electrónico" required>
+                        </div>
+                        <div class="mb-4">
+                            <input class="shadow appearance-none border rounded w-full py-2 px-3 placeholder-primary placeholder-opacity-70 leading-tight focus:outline-none focus:shadow-outline" name="tCelular" type="text" placeholder="Número de celular">
+                        </div>
+                        <div class="mb-4">
+                            <textarea class="shadow form-textarea mt-1 block w-full border rounded w-full py-2 px-3 placeholder-primary placeholder-opacity-70 leading-tight focus:outline-none focus:shadow-outline" name="tMensaje" placeholder="Mensaje" required></textarea>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <button class="bg-secondary hover:bg-opacity-70 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                                Enviar
+                            </button>
+                        </div>
+                    </form>
                 </div>
-                <div class="mb-4">
-                        <input class="shadow appearance-none border rounded w-full py-2 px-3 placeholder-primary placeholder-opacity-70 leading-tight focus:outline-none focus:shadow-outline" name="tEmail" type="text" placeholder="Correo electrónico" required>
-                </div>
-                <div class="mb-4">
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 placeholder-primary placeholder-opacity-70 leading-tight focus:outline-none focus:shadow-outline" name="tCelular" type="text" placeholder="Número de celular">
-                </div>
-                <div class="mb-4">
-                    <textarea class="shadow form-textarea mt-1 block w-full border rounded w-full py-2 px-3 placeholder-primary placeholder-opacity-70 leading-tight focus:outline-none focus:shadow-outline" name="tMensaje" placeholder="Mensaje" required></textarea>
-                </div>
-                <div class="flex items-center justify-center">
-                    <button class="bg-secondary hover:bg-opacity-70 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
-                        Enviar
-                    </button>
-                </div>
-                </form>
             </div>
         </div>
     </section>

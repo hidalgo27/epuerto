@@ -2,36 +2,13 @@
 @section('title')
     <title>{{$paquete->titulo}} best cusco day trips</title>
 @endsection
+@section('title_header')
+    <h1 class="text-xl mb-6 font-bold font-cinzel text-secondary">Epuerto Perú Travel & Tours</h1>
+    <h3 class="md:text-5xl text-3xl font-semibold tracking-widest text-gray-50">{{$paquete->titulo}}</h3>
+    <h4 class="md:text-8xl text-5xl font-bold inset-0 text-white text-opacity-10 absolute top-0">{{$paquete->titulo}}</h4>
+@endsection
 @section('content')
-   <div class="relative -mt-32 flex flex-col justify-between h-screen  overflow-hidden">
-      <div class="relative items-start grid grid-cols-3 justify-between ">
-      </div>
-      <div class="relative grid mt-48 grid-cols-1 gap-12 place-items-center text-center justify-center text-white z-30">
-         <div class="relative text-center">
-            <h3 class="text-xl mb-6 font-bold font-cinzel text-secondary">Epuerto Perú Travel & Tours</h3>
-            <h1 class="md:text-5xl text-3xl font-bold tracking-widest text-gray-50">{{$paquete->titulo}}</h1>
-            <h4 class="md:text-9xl text-5xl font-bold inset-0 text-white text-opacity-10 absolute top-0">EPUERTO</h4>
-         </div>
-      </div>
-      <div class="relative z-30 p-5 flex justify-center">
-         <a href="#" class="text-gray-50">
-            <svg xmlns="http://www.w3.org/2000/svg" class="animate-bounce h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-            </svg>
-         </a>
-      </div>
-      <video autoplay loop muted class="absolute z-10 w-auto min-w-full min-h-full max-w-none">
-                     <source src="https://assets.mixkit.co/videos/preview/mixkit-set-of-plateaus-seen-from-the-heights-in-a-sunset-26070-large.mp4" type="video/mp4" />Your browser does not support the video tag.
-   {{--            <source src="{{asset('media/intro.mp4')}}" type="video/mp4" />Your browser does not support the video tag.--}}
-      </video>
-      {{--        <div class="vimeo-wrapper absolute z-10 w-auto min-w-full min-h-full max-w-none">--}}
-      {{--            <iframe src="https://player.vimeo.com/video/361847703?background=1&autoplay=1&loop=1&title=0&byline=0&portrait=0&muted=1"--}}
-      {{--                    frameborder="0"  class="absolute z-10 w-auto min-w-full min-h-full max-w-none"></iframe>--}}
-      {{--        </div>--}}
-      <div class="absolute z-10 w-auto min-w-full min-h-full bg-gray-900 max-w-none opacity-50">
-
-      </div>
-   </div>
+   
       <div class="grid md:grid-cols-6 grid-cols-1 md:gap-16 p-10 text-gray-700">
          <div class="md:col-span-4 lg:ml-8 mt-10">
             <hr>
