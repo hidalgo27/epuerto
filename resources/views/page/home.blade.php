@@ -114,7 +114,34 @@
         @endforeach
     </section>
 
-    <section class="flex flex-col lg:flex-row lg:mt-32 mt-10 mb-24 items-center">
+    <section class="px-24 mt-24 grid grid-cols-3 sm:grid-cols-6 gap-4 bg-gray-200 py-6">
+        <div class="p-3">
+            <a class="venobox" data-gall="myGallery"  href="{{asset('doc/marca-peru.pdf')}}">
+                <img src="{{asset('images/logos/marca-peru.png')}}" alt="">
+            </a>
+        </div>
+        <div class="p-3">
+            <a href="https://www.tripadvisor.com.pe/Attraction_Review-g294314-d3836582-Reviews-Epuerto_Peru_Travel_Tours-Cusco_Cusco_Region.html" target="_blank"><img src="{{asset('images/logos/tripadvisor.png')}}" alt=""></a>
+        </div>
+        <div class="p-3">
+            <a class="venobox" data-gall="myGallery"  href="{{asset('doc/Caltur.pdf')}}">
+                <img src="{{asset('images/logos/caltur.png')}}" alt="">
+            </a>
+        </div>
+        <div class="p-3">
+            <a class="venobox" data-gall="myGallery"  href="{{asset('doc/Dircetur.pdf')}}">
+                <img src="{{asset('images/logos/dircetur.png')}}" alt="">
+            </a>
+        </div>
+        <div class="p-3">
+            <img src="{{asset('images/logos/iglta.jpg')}}" alt="">
+        </div>
+        <div class="p-3">
+            <img src="{{asset('images/logos/promperu.png')}}" alt="">
+        </div>
+
+    </section>
+    <section class="flex flex-col lg:flex-row mb-24 items-center">
         <div class="lg:px-24 lg:py-32 p-16 bg-primary text-gray-50 shadow-xl lg:w-3/4 xl:w-3/4 2xl:w-1/2">
             <div class="relative">
                 <h4 class="lg:text-4xl md:text-5xl text-3xl text-white font-medium relative z-30 text-secondary">Tómese un descanso y vea</h4>
@@ -182,3 +209,12 @@
 
 
 @endsection
+@push('scripts')
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.venobox').venobox();
+        });
+
+    </script>
+@endpush

@@ -58,10 +58,19 @@
     </div>
 
     <header>
-        <div class="relative shadow h-20 bg-primary dark:bg-gray-800 flex flex-wrap z-30">
-            <div class="pt-1 mx-auto">
-                <a href="http://en.epuertotravelperu.com"><img src="{{asset('images/iconos/reino-unido.png')}}" alt="" class="w-9"></a>
+        <div class="relative flex justify-between shadow h-20 bg-primary dark:bg-gray-800 flex flex-wrap z-30">
+            <div class="pt-1">
+                <a href="http://en.epuertotravelperu.com"><img src="{{asset('images/iconos/reino-unido.png')}}" alt="" class="w-9 ml-3"></a>
             </div>
+
+            <div class="flex flex-row pt-2 px-3 gap-3">
+                <a href="https://www.facebook.com/EpuertoTravelPeru" target="_blank"><img src="{{asset('images/iconos/facebook.png')}}" class="h-7 w-7 transform hover:scale-125 transition duration-500 "></a>
+                <a href="https://www.youtube.com/user/EpuertoPeruTravelPer" target="_blank"><img src="{{asset('images/iconos/youtube.png')}}" class="h-7 w-7 transform hover:scale-125 transition duration-500"></a>
+                <div class=" bg-green-500 rounded-full h-7 w-7 flex items-center justify-center transform hover:scale-125 transition duration-500">
+                    <a href="https://www.tripadvisor.com.pe/Attraction_Review-g294314-d3836582-Reviews-Epuerto_Peru_Travel_Tours-Cusco_Cusco_Region.html" target="_blank"><img src="{{asset('images/iconos/tripadvisor.png')}}" class="h-8 w-8 "></a>
+                </div>
+            </div>
+
         </div>
     </header>
 
@@ -188,11 +197,13 @@
         </div>
         <hr class="mx-16">
         <div class="container mx-auto text-center text-xs text-gray-50 py-3">
-            Copyright Nebula 2021 All Rights Reserved
+            Copyright Nebula 2021 All Rights Reserved | <a href="{{asset('doc/Terms&Conditions2021.pdf')}}" target="_blank" class="font-medium">Términos y Condiciones</a>
         </div>
     </footer>
 </div>
 <script src="{{asset('js/app.js')}}"></script>
+@stack('scripts')
+<script src="{{asset('js/plugins.js')}}"></script>
 <script>
     (() => {
         'use strict';
