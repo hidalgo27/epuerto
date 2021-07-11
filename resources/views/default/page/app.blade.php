@@ -135,7 +135,7 @@
 
         </div>
         <div class="bg-footer-texture bg-repeat-x absolute h-6 bg-12 bottom-0 w-full z-30"></div>
-
+        <img src="{{asset('images/logos/marca-peru.png')}}" alt="" width="150" class="mx-auto absolute bottom-0 z-50">
     </header>
 
     @yield('content')

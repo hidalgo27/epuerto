@@ -3,6 +3,7 @@
     <title>Best Cusco tours and day trips - Epuerto Travel agency Perú</title>
 @endsection
 @section('title_header')
+
     <h1 class="text-4xl mb-6 font-bold font-cinzel text-secondary">Epuerto Perú Travel & Tours</h1>
     <h3 class="md:text-5xl text-3xl font-medium tracking-widest text-gray-50">EXPERIENCIAS Y CONEXIONES <br> ÚNICAS COMO NINGUNA OTRA.</h3>
     <h4 class="md:text-9xl text-5xl font-bold inset-x-0 top-0 -mt-14 text-white text-opacity-10 absolute">EPUERTO</h4>
