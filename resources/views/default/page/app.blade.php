@@ -117,11 +117,12 @@
 
         </div>
         <div class="relative z-30 p-5 flex justify-center">
-            <a href="#" class="text-gray-50">
-                <svg xmlns="http://www.w3.org/2000/svg" class="animate-bounce h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                </svg>
-            </a>
+            <img src="{{asset('images/logos/marca-peru.png')}}" alt="" width="150" class="opacity-50">
+{{--            <a href="#" class="text-gray-50">--}}
+{{--                <svg xmlns="http://www.w3.org/2000/svg" class="animate-bounce h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">--}}
+{{--                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />--}}
+{{--                </svg>--}}
+{{--            </a>--}}
         </div>
         <video autoplay loop muted class="absolute z-10 w-auto min-w-full min-h-full max-w-none">
                         <source src="https://assets.mixkit.co/videos/preview/mixkit-set-of-plateaus-seen-from-the-heights-in-a-sunset-26070-large.mp4" type="video/mp4" />Your browser does not support the video tag.
@@ -135,7 +136,9 @@
 
         </div>
         <div class="bg-footer-texture bg-repeat-x absolute h-6 bg-12 bottom-0 w-full z-30"></div>
-        <img src="{{asset('images/logos/marca-peru.png')}}" alt="" width="150" class="mx-auto absolute bottom-0 z-50">
+{{--        <div class="filter invert mx-auto absolute bottom-0 right-0 z-50">--}}
+{{--            <img src="{{asset('images/logos/marca-peru.png')}}" alt="" width="150">--}}
+{{--        </div>--}}
     </header>
 
     @yield('content')
