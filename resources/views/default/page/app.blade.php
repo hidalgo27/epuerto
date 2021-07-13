@@ -63,7 +63,7 @@
                 <i class="fas fa-bell"></i>
               </span>
             <span class="inline-block align-middle mr-8">
-                <a href="{{asset('doc/covid-19.pdf')}}"><b class="capitalize">COVID-19</b> Actualización</a>
+                <a href="{{asset('doc/covid-19.pdf')}}" target="_blank"><b class="capitalize">COVID-19</b> Actualización</a>
               </span>
         </div>
         <button class="bg-transparent text-2xl font-semibold leading-none mr-6 outline-none focus:outline-none" onclick="closeAlert(event)">
