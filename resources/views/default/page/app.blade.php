@@ -57,19 +57,19 @@
         </a>
     </div>
 
-    <div class="text-white px-6 py-1 flex items-center justify-between border-0 relative w-full bg-secondary bg-opacity-90">
-        <div class="">
-            <span class="text-xl inline-block mr-5 align-middle">
-                <i class="fas fa-bell"></i>
-              </span>
-            <span class="inline-block align-middle mr-8">
-                <a href="{{asset('doc/covid-19.pdf')}}" target="_blank"><b class="capitalize">COVID-19</b> Actualización</a>
-              </span>
-        </div>
-        <button class="bg-transparent text-2xl font-semibold leading-none mr-6 outline-none focus:outline-none" onclick="closeAlert(event)">
-            <span>×</span>
-        </button>
-    </div>
+{{--    <div class="text-white px-6 py-1 flex items-center justify-between border-0 relative w-full bg-secondary bg-opacity-90">--}}
+{{--        <div class="">--}}
+{{--            <span class="text-xl inline-block mr-5 align-middle">--}}
+{{--                <i class="fas fa-bell"></i>--}}
+{{--              </span>--}}
+{{--            <span class="inline-block align-middle mr-8">--}}
+{{--                <a href="{{asset('doc/covid-19.pdf')}}" target="_blank"><b class="capitalize">COVID-19</b> Actualización</a>--}}
+{{--              </span>--}}
+{{--        </div>--}}
+{{--        <button class="bg-transparent text-2xl font-semibold leading-none mr-6 outline-none focus:outline-none" onclick="closeAlert(event)">--}}
+{{--            <span>×</span>--}}
+{{--        </button>--}}
+{{--    </div>--}}
 
     <header class="relative flex flex-col justify-between h-screen overflow-hidden">
         <div class="flex flex-col">
