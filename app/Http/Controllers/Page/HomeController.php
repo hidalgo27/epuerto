@@ -12,6 +12,9 @@ use App\Models\TDestino;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\URL;
+use App\Models\Blog_categoria;
+use App\Models\Blog_post;
+use Illuminate\Support\Collection;
 
 class HomeController extends Controller
 {
@@ -49,7 +52,51 @@ class HomeController extends Controller
         return view('page.contacto',compact('paquetes'));
     }
     public function noticias(){
-        return view('page.noticias');
+        $paquetes=TPaquete::all();
+        $posts= Blog_post::with(['user','categoria','imagenes'])->paginate(5);
+        $ultimas = Blog_post::latest()
+            ->take(3)
+            ->with(['user','categoria','imagenes'])
+            ->get();
+        $categorias=$this->get_categorias_post_count();
+        return view('page.noticias',compact('posts','paquetes','ultimas','categorias'));
+    }
+    public function noticias_categoria($categoria){
+        $paquetes=TPaquete::all();
+        $consulta = Blog_categoria::where('nombre',$categoria)->first();
+        $posts=Blog_post::where('categoria_id',$consulta->id)->with(['user','categoria','imagenes'])
+        ->paginate(5);
+        $ultimas = Blog_post::latest()
+            ->take(3)
+            ->with(['user','categoria','imagenes'])
+            ->get();
+        $categorias=$this->get_categorias_post_count();
+        return view('page.noticias',compact('posts','paquetes','ultimas','categorias'));
+    }
+    public function noticias_detail($url){
+        $paquetes=TPaquete::all();
+        $post=Blog_post::where('url',$url)
+            ->with(['user','categoria','imagenes'])
+            ->first();
+        $categoria=Blog_post::select('categoria_id')
+            ->where('url',$url)
+            ->get();
+        $posts_relacionados=Blog_post::where('categoria_id',$categoria[0]->categoria_id)
+            ->latest()
+            ->take(3)
+            ->with(['user','categoria','imagenes'])
+            ->get();
+        return view('page.noticiaDetail',compact('post','paquetes','posts_relacionados'));
+    }
+    public function get_categorias_post_count(){
+        $categorias = Blog_categoria::get(); 
+        $collection = collect();
+        foreach ($categorias as $cat) { 
+            $idCat = $cat->id; 
+            $consulta = Blog_post::where('categoria_id',$idCat)->count();
+            $collection->push([$cat->nombre,$consulta]);
+        }
+        return $collection;
     }
     public function nosotros(){
         $paquetes=TPaquete::all();
