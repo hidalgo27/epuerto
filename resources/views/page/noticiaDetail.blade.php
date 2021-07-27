@@ -11,7 +11,7 @@
 <div class="grid md:grid-cols-4 grid-cols-1 lg:mx-10 mx-5 gap-10">
     <div class="md:col-span-3">
         <section class="md:px-5 px-2 lg:mb-20 lg:mt-24 md:my-16 my-10">
-            <div class="flex flex-col md:flex-row bg-gray-100 text-xs text-gray-700 md:gap-12 gap-5 py-5 justify-center lg:justify-between lg:px-5 mb-12">
+            <div class="shadow rounded-lg flex flex-col md:flex-row bg-gray-100 lg:text-sm text-xs text-gray-700 md:gap-12 gap-5 py-5 justify-center lg:justify-between lg:px-5 mb-12">
                 <div class="grid grid-rows-2 gap-2 text-center">
                     <div class="flex justify-center"><i data-feather="calendar" witdh="16px" height="16px" class="text-primary text-opacity-50"></i><span class="text-primary text-opacity-50">Fecha de Publicación</span></div>
                     <div>{{date('d/m/Y', strtotime($post->updated_at))}}</div>
