@@ -1,35 +1,13 @@
 @extends('default.page.app')
+@section('title')
+    <title>Información de viaje best cusco day trips</title>
+@endsection
+@section('title_header')
+    <h1 class="text-xl mb-6 font-bold font-cinzel text-secondary">Epuerto Perú Travel & Tours</h1>
+    <h3 class="md:text-5xl text-3xl font-semibold tracking-widest text-gray-50">Noticias</h3>
+    <h4 class="md:text-8xl text-5xl font-bold inset-0 text-white text-opacity-10 absolute top-0">Noticias</h4>
+@endsection
 @section('content')
-    <div class="relative -mt-32 flex flex-col justify-between h-screen  overflow-hidden">
-        <div class="relative items-start grid grid-cols-3 justify-between ">
-
-        </div>
-
-        <div class="relative grid mt-48 grid-cols-1 gap-12 place-items-center text-center justify-center text-white z-30">
-            <div class="relative text-center">
-                <h1 class="text-xl mb-6 font-bold font-cinzel text-secondary">Epuerto Perú Travel & Tours</h1>
-                <h3 class="md:text-5xl text-3xl font-semibold tracking-widest text-gray-50">EXPERIENCIAS Y CONEXIONES <br> ÚNICAS COMO NINGUNA OTRA.</h3>
-                <h4 class="md:text-9xl text-5xl font-bold inset-0 text-white text-opacity-10 absolute top-0">EPUERTO</h4>
-            </div>
-        </div>
-        <div class="relative z-30 p-5 flex justify-center">
-            <a href="#" class="text-gray-50">
-                <svg xmlns="http://www.w3.org/2000/svg" class="animate-bounce h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                </svg>
-            </a>
-        </div>
-        <video autoplay loop muted class="absolute z-10 w-auto min-w-full min-h-full max-w-none">
-                        <source src="https://assets.mixkit.co/videos/preview/mixkit-set-of-plateaus-seen-from-the-heights-in-a-sunset-26070-large.mp4" type="video/mp4" />Your browser does not support the video tag.
-    {{--            <source src="{{asset('media/intro.mp4')}}" type="video/mp4" />Your browser does not support the video tag.--}}
-        </video>
-        {{--        <div class="vimeo-wrapper absolute z-10 w-auto min-w-full min-h-full max-w-none">--}}
-        {{--            <iframe src="https://player.vimeo.com/video/361847703?background=1&autoplay=1&loop=1&title=0&byline=0&portrait=0&muted=1"--}}
-        {{--                    frameborder="0"  class="absolute z-10 w-auto min-w-full min-h-full max-w-none"></iframe>--}}
-        {{--        </div>--}}
-        <div class="absolute z-10 w-auto min-w-full min-h-full bg-gray-900 max-w-none opacity-50">
-        </div>
-    </div>
     <div class="grid md:grid-cols-4 grid-cols-1 lg:mx-10 mx-5 gap-10">
         <div class="md:col-span-3">
             <section class="lg:mb-20 lg:mt-24 md:my-16 my-10 lg:justify-between lg:flex">
@@ -39,22 +17,77 @@
                 </div>
                 <div class="block pt-6 text-right lg:mr-10">
                     <div class="transform hover:-translate-y-3 transition duration-500 ease-in-out">
-                        <a href="" class="transform hover:-translate-y-3 transition duration-500 ease-in-out rounded-full py-4 px-9 bg-secondary text-white font-semibold">CONTACTAR</a>
+                        <a href="/noticias#contacto" class="transform hover:-translate-y-3 transition duration-500 ease-in-out rounded-full py-4 px-9 bg-secondary text-white font-semibold">CONTACTAR</a>
                     </div>
                 </div>
             </section>
-        </div>
-        <div class="lg:my-16 md:my-16 my-5">
-            <div class="md:mt-5 lg:ml-2">
-                <span class="text-primary font-semibold lg:text-lg text-base mb-2">Tours recomendados</span>
-                <a href="">
-                    <div class="flex flex-cols-2 px-2 py-5 lg:gap-5 gap-2 items-center">
-                        <img src="{{asset('images/tour/camino-inca-1.jpg')}}" class="object-cover h-10 w-10 rounded-full transform hover:scale-150 transition duration-500">
-                        <span class="lg:text-sm text-xs text-gray-500 hover:text-secondary">El Camino de las Piedras Cansadas</span>
+            <section class="md:px-5 px-2">
+                @foreach ($posts as $post)
+                    <div class="grid lg:grid-cols-2 grid-cols-1 rounded shadow mb-12 lg:mx-5">
+                        <div>
+                            <img src="{{$post->imagen_miniatura}}" class="object-center h-full object-cover rounded-bl rounded-tl hover:shadow-xl transform hover:scale-105 transition duration-500">
+                        </div>
+                        <div>
+                            <div class="flex bg-gray-100 text-xs text-gray-700 gap-5 p-5 justify-between">
+                                <div class="flex"><i data-feather="calendar" witdh="16px" height="16px"></i>{{date('d/m/Y', strtotime($post->updated_at))}}</div>
+                                <div class="flex"><i data-feather="user" witdh="16px" height="16px"></i>{{$post->user->name}}</div>
+                                <div class="flex"><i data-feather="tag" witdh="16px" height="16px"></i>{{$post->categoria->nombre}}</div>
+                            </div>
+                            <div class="p-5 flex flex-col">
+                                <a href="/noticias/{{$post->url}}"><h3 class=" text-primary font-semibold text-lg pb-5 cursor-pointer transform hover:-translate-x-2 transition duration-500 ease-in-out">{{$post->titulo}}</h3></a> 
+                                <div class="text-gray-700 text-sm">{!!Str::limit($post->detalle, 200,$end='...')!!}</div>
+                                <div class="mt-8 block flex justify-end">
+                                    <a href="/noticias/{{$post->url}}" class="text-sm bg-primary bg-opacity-60 rounded-lg p-2 text-white hover:text-primary hover:opacity-70">Ver detalles</a>
+                                </div>    
+                            </div>
+                        </div>
                     </div>
-                </a>
-                <hr class="mx-2">
+                @endforeach
+                <div class="mb-10">
+                    {{ $posts->links() }}
+                    </div>
+            </section>
+        </div>
+        <div class="lg:my-16 md:my-16">
+                <div class="md:mt-5 lg:ml-2 md:pt-10">
+                    <span class="text-primary font-semibold lg:text-lg text-base">Categorías</span>
+                    <div class="mt-5 mb px-4 mb-10">
+                    @foreach ($categorias as $categoria)
+                        <a href="/noticias/categoria/{{$categoria[0]}}">
+                            <div class="flex justify-between text-gray-500 mb-2">
+                                <div class="flex hover:text-secondary lg:text-sm text-xs transform hover:-translate-x-2 transition duration-500 ease-in-out"><i data-feather="tag" class="mr-2 " width="16px" height="16px"></i>{{$categoria[0]}}</div>
+                                <span class="lg:text-sm text-xs bg-secondary bg-opacity-30 rounded px-2 transform hover:scale-150 transition duration-500">{{$categoria[1]}}</span>
+                            </div>
+                        </a>
+                    @endforeach
+                    </div>
+                </div>
+                <div class="md:mt-5 lg:ml-2 md:pt-10 mb-10">
+                    <span class="text-primary font-semibold lg:text-lg text-base mb-2">Ultimas noticias</span>
+                    @foreach ($ultimas as $ultima)
+                        <a href="/noticias/{{$ultima->url}}">
+                            <div class="flex flex-cols-2 px-2 py-5 lg:gap-5 gap-2 items-center">
+                                <img src="{{asset($ultima->imagen_miniatura)}}" class="object-cover h-10 w-10 rounded-full transform hover:scale-150 transition duration-500">
+                                <div class="lg:text-sm text-xs text-gray-500 hover:text-secondary transform hover:-translate-x-2 transition duration-500 ease-in-out">{{$ultima->titulo}}</div>
+                            </div>
+                        </a>
+                        <hr class="mx-2">
+                    @endforeach
+                </div>
+                    
+                <div class="md:mt-5  lg:ml-2">
+                    <span class="text-primary font-semibold lg:text-lg text-base mb-2">Tours recomendados</span>
+                    @foreach ($paquetes as $paquete)
+                        <a href="/en-tours/{{$paquete->url}}">
+                            <div class="flex flex-cols-2 px-2 py-5 lg:gap-5 gap-2 items-center">
+                                <img src="{{asset($paquete->imagen)}}" class="object-cover h-10 w-10 rounded-full transform hover:scale-150 transition duration-500">
+                                <div class="lg:text-sm text-xs text-gray-500 hover:text-secondary transform hover:-translate-x-2 transition duration-500 ease-in-out">{{$paquete->titulo}}</div>
+                            </div>
+                        </a>
+                        <hr class="mx-2">
+                    @endforeach
+                </div>
+                
             </div>
         </div>
-    </div>
 @endsection

@@ -118,6 +118,7 @@
                     <a class="text-gray-50 my-1 text-sm font-medium dark:text-gray-200 hover:text-secondary dark:hover:text-indigo-400 md:mx-4 md:my-0 transform hover:-translate-x-2 transition duration-500 ease-in-out" href="/informacion-de-viaje">Información</a>
                     <a class="text-gray-50 my-1 text-sm font-medium dark:text-gray-200 hover:text-secondary dark:hover:text-indigo-400 md:mx-4 md:my-0 transform hover:-translate-x-2 transition duration-500 ease-in-out" href="/hoteles">Hoteles</a>
                     <a class="text-gray-50 my-1 text-sm font-medium dark:text-gray-200 hover:text-secondary dark:hover:text-indigo-400 md:mx-4 md:my-0 transform hover:-translate-x-2 transition duration-500 ease-in-out" href="/f-a-q">FAQs</a>
+                    <a class="text-gray-50 my-1 text-sm font-medium dark:text-gray-200 hover:text-secondary dark:hover:text-indigo-400 md:mx-4 md:my-0 transform hover:-translate-x-2 transition duration-500 ease-in-out" href="/noticias">Noticias</a>
                     <a class="text-gray-50 my-1 text-sm font-medium dark:text-gray-200 hover:text-secondary dark:hover:text-indigo-400 md:mx-4 md:my-0 transform hover:-translate-x-2 transition duration-500 ease-in-out" href="/contacto">Contacto</a>
                 </div>
             </div>

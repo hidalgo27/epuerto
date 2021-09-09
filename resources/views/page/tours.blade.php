@@ -24,7 +24,7 @@
    <section class="md:px-5 px-2">
       @foreach ($paquetes as $paquete)
          <div class="mb-16">
-            <a href="/en-tours/{{$paquete->url}}" class="lg:hidden"><h3 class="text-2xl font-semibold text-primary pb-3 hover:text-secondary hover:font-light">Cusco Magico 4 Días 3 Noches</h3></a>
+            <a href="/en-tours/{{$paquete->url}}" class="lg:hidden"><h3 class="text-2xl font-semibold text-primary pb-3 hover:text-secondary hover:font-light">{{$paquete->titulo}}</h3></a>
             <div class="grid lg:grid-cols-2 grid-cols-1 gap-8 items-center">
                <div class="relative">
                   <a href="/en-tours/{{$paquete->url}}"><img src="{{asset($paquete->imagen)}}" class="object-cover shadow-lg rounded transform hover:scale-105 transition duration-500"></a>
