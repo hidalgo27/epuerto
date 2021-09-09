@@ -95,6 +95,22 @@
 {{--    </section>--}}
 
     <section class="md:px-24 px-10 my-24 lg:justify-between lg:flex">
+        <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-4">
+            <div class="">
+                <div class="relative mb-6">
+                    <h2 class="md:text-2xl text-lg font-semibold z-30 text-primary relative">Déjate cautivar por la magia de lo inesperado</h2>
+                    <h4 class="md:text-8xl text-5xl font-bold inset-0 text-gray-100 text-opacity-90 absolute z-10 -top-10">ePuerto</h4>
+                </div>
+                <p>Durante 7 días y 6 noches viajaremos hasta uno de los lugares más sagrados y energéticos de la tierra, Machu Picchu, para recordar y reconectar con nuestra verdadera esencia, renovar energías y renacer a un nuevo propósito de vida. </p>
+            </div>
+            <div class="">
+                <a href=""><img src="{{asset('images/banner.jpg')}}" alt="" class="w-full h-full bg-cover"></a>
+            </div>
+
+        </div>
+
+    </section>
+    <section class="md:px-24 px-10 my-24 lg:justify-between lg:flex">
         <div class="relative">
             <h2 class="md:text-5xl text-3xl font-semibold z-30 text-primary relative">Paquetes de Viaje</h2>
             <h4 class="md:text-8xl text-5xl font-bold inset-0 text-gray-100 text-opacity-90 absolute z-10 -top-10">TOURS</h4>
