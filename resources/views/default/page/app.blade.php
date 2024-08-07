@@ -89,7 +89,7 @@
                     <a href="https://www.youtube.com/user/EpuertoPeruTravelPer" target="_blank" class="mx-2">
                         <i data-feather="youtube" class="text-gray-50" stroke-width="1"></i>
                     </a>
-                    <a href="https://www.instagram.com/apuantasaqa/" target="_blank" class="mx-2">
+                    <a href="https://www.tripadvisor.com.pe/Attraction_Review-g294314-d3836582-Reviews-Epuerto_Peru_Travel_Tours-Cusco_Cusco_Region.html" target="_blank" class="mx-2">
                         <img src="{{asset('images/iconos/ico_tripadvisor.png')}}" alt="" class="w-6">
                     </a>
                 </div>
