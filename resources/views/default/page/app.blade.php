@@ -157,7 +157,7 @@
     </header>
 
     @yield('content')
-    <section class="grid grid-cols-2 sm:grid-cols-6 px-24 gap-12 sm:gap-24 bg-gray-100 py-6">
+    <section class=" grid grid-cols-2 sm:grid-cols-8 px-24 gap-12 sm:gap-16 2xl:gap-52 bg-gray-100 py-6">
         <div class="">
             <a class="venobox block relative group" data-gall="myGallery" framewidth="100" href="{{asset('doc/marca-peru.jpg')}}">
                 <img src="{{asset('images/logos/marca-peru.png')}}" alt="" class="object-contain">
@@ -169,8 +169,18 @@
             </a>
         </div>
         <div class="">
-            <a class="venobox block relative group" data-gall="myGallery"  href="{{asset('doc/Caltur.jpg')}}">
+            <a class="venobox block relative group" data-gall="myGallery"  href="{{asset('doc/caltur.jpg')}}">
                 <img src="{{asset('images/logos/caltur.png')}}" alt="" class="object-contain">
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="bg-primary bg-opacity-70 p-1 rounded-md h-8 w-8 text-gray-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                    </svg>
+                </div>
+            </a>
+        </div>
+        <div class="">
+            <a class="venobox block relative group" data-gall="myGallery"  href="{{asset('doc/esnna.jpg')}}">
+                <img src="{{asset('images/logos/esnna.png')}}" alt="" class="object-contain">
                 <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
                     <svg xmlns="http://www.w3.org/2000/svg" class="bg-primary bg-opacity-70 p-1 rounded-md h-8 w-8 text-gray-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
@@ -189,16 +199,28 @@
             </a>
         </div>
         <div class="">
-            <img src="{{asset('images/logos/iglta.jpg')}}" alt="" class="object-contain">
+            <a class="venobox block relative group" data-gall="myGallery"  href="{{asset('doc/safe-travel.jpg')}}">
+                <img src="{{asset('images/logos/safe-travel.png')}}" alt="" class="object-contain">
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="bg-primary bg-opacity-70 p-1 rounded-md h-8 w-8 text-gray-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                    </svg>
+                </div>
+            </a>
         </div>
         <div class="">
-            <img src="{{asset('images/logos/promperu.png')}}" alt="" class="object-contain">
+            <img src="{{asset('images/logos/iglta.png')}}" alt="" class="object-contain">
+        </div>
+        <div class="">
+            <img src="{{asset('images/logos/prom-peru.png')}}" alt="" class="object-contain">
         </div>
         <div class="">
             <img src="{{asset('images/logos/logo-registrado.png')}}" alt="" class="object-contain">
         </div>
 
     </section>
+
+
     <section id="contacto">
         <div class="flex justify-center items-center sm:justify-end lg:bg-left bg-right bg-green-500 relative">
             <img src="{{asset('images/mampi-2.jpg')}}" alt="" class="object-cover w-full" style="height: 500px">
@@ -243,7 +265,7 @@
                     <div class="font-semibold uppercase text-sm">
                         <span>Epuerto</span><span class="text-secondary"> Perú</span>
                     </div>
-                    <p class="p-5 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas molestiae provident illo, eveniet qui deleniti.<p>
+                    <p class="p-5 text-sm">Tu próxima aventura está a un clic de distancia.<p>
 
                 </div>
                 <div class="text-white">
