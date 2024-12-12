@@ -75,7 +75,7 @@
         <div class="flex flex-col">
             <div class="relative items-start shadow grid grid-cols-3 justify-between z-30">
                 <div class="p-8 flex inline-flex text-gray-50 items-center invisible sm:visible">
-                    <a href="http://en.epuertotravelperu.com"><img src="{{asset('images/iconos/reino-unido.png')}}" alt="" class="w-9 ml-3"></a>
+                    <a href="https://en.epuertotravelperu.com"><img src="{{asset('images/iconos/reino-unido.png')}}" alt="" class="w-9 ml-3"></a>
                     <span class="mx-2">|</span>
                     <i data-feather="phone" class="" stroke-width="1"></i> +51 984 645720
                 </div>
@@ -157,7 +157,7 @@
     </header>
 
     @yield('content')
-    <section class=" grid grid-cols-2 sm:grid-cols-8 px-24 gap-12 sm:gap-16 2xl:gap-52 bg-gray-100 py-6">
+    <section class=" grid grid-cols-2 sm:grid-cols-8 px-24 gap-12 sm:gap-16 bg-gray-100 py-6">
         <div class="">
             <a class="venobox block relative group" data-gall="myGallery" framewidth="100" href="{{asset('doc/marca-peru.jpg')}}">
                 <img src="{{asset('images/logos/marca-peru.png')}}" alt="" class="object-contain">

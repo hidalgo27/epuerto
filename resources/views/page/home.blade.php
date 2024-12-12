@@ -10,7 +10,7 @@
 @endsection
 @section('content')
 
-    <section class="mb-12 grid grid-cols-2 sm:grid-cols-8 px-24 gap-12 sm:gap-16 2xl:gap-52 bg-gray-100 py-6">
+    <section class="mb-12 grid grid-cols-2 sm:grid-cols-8 px-24 gap-12 sm:gap-16 bg-gray-100 py-6">
         <div class="">
             <a class="venobox block relative group" data-gall="myGallery" framewidth="100" href="{{asset('doc/marca-peru.jpg')}}">
                 <img src="{{asset('images/logos/marca-peru.png')}}" alt="" class="object-contain">
