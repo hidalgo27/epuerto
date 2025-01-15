@@ -22,7 +22,7 @@
             </a>
         </div>
         <div class="">
-            <a class="venobox block relative group" data-gall="myGallery"  href="{{asset('doc/caltur.jpg')}}">
+            <a class="venobox block relative group" data-gall="myGallery"  href="{{asset('doc/Caltur.jpg')}}">
                 <img src="{{asset('images/logos/caltur.png')}}" alt="" class="object-contain">
                 <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
                     <svg xmlns="http://www.w3.org/2000/svg" class="bg-primary bg-opacity-70 p-1 rounded-md h-8 w-8 text-gray-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
