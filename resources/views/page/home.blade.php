@@ -80,7 +80,7 @@
             </svg>
             <h3 class="font-semibold text-primary text-lg  mt-3 mb-4">Servicio Privado</h3>
             <p class="text-gray-500 mb-9 block">Disfruta de un servicio privado único, diseñado solo para ti.</p>
-            
+
         </div>
         <div class="text-center shadow-lg rounded-lg md:px-12 px-5 py-8 bg-white">
             <svg  xmlns="http://www.w3.org/2000/svg" class="h-20 w-16 mx-auto text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -88,7 +88,7 @@
             </svg>
             <h3 class="font-semibold text-primary text-lg  mt-3 mb-4">Soporte 24/7</h3>
             <p class="text-gray-500 mb-9 block">Estamos contigo las 24 horas, todos los días del año.</p>
-            
+
         </div>
         <div class="text-center shadow-lg rounded-lg md:px-12 px-5 py-8 bg-white">
             <svg  xmlns="http://www.w3.org/2000/svg" class="h-20 w-16 mx-auto text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -96,7 +96,7 @@
             </svg>
             <h3 class="font-semibold text-primary text-lg  mt-3 mb-4">Mejores Precios</h3>
             <p class="text-gray-500 mb-9 block">Viaja con las mejores tarifas, garantizado.</p>
-            
+
         </div>
         <div class="text-center shadow-lg rounded-lg md:px-12 px-5 py-8 bg-primary">
             <h3 class="font-semibold text-gray-50 text-lg  mt-3 mb-4">Reservar Ahora</h3>
